@@ -16,7 +16,6 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-serif;min-height:100vh;}
 
-/* MODAL */
 .loc-modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:1100;display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(6px);}
 .loc-modal.hidden{display:none;}
 .loc-box{background:var(--surface);border:1px solid var(--border2);border-radius:20px;max-width:360px;width:100%;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.6);}
@@ -35,12 +34,11 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .loc-btn-skip:hover{border-color:var(--t3);color:var(--text);}
 .loc-note{font-size:11px;color:var(--t3);text-align:center;margin-top:10px;line-height:1.5;}
 
-/* LOC CARD */
 .loc-card{display:none;align-items:center;gap:14px;background:linear-gradient(135deg,rgba(76,201,240,0.08),rgba(6,214,160,0.05));border:1px solid rgba(76,201,240,0.2);border-radius:14px;padding:14px 18px;margin:12px auto 0;max-width:760px;}
 .loc-card.show{display:flex;}
 .loc-card-icon{font-size:28px;flex-shrink:0;}
 .loc-card-info{flex:1;min-width:0;}
-.loc-card-place{font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.loc-card-place{font-size:13px;font-weight:700;color:var(--blue);}
 .loc-card-desc{font-size:11px;color:var(--t2);margin-top:2px;}
 .loc-card-prices{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;}
 .lcp{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 10px;text-align:center;min-width:72px;}
@@ -52,7 +50,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .loc-card-retry{background:none;border:1px solid var(--border);border-radius:7px;color:var(--t2);padding:5px 10px;font-size:10px;cursor:pointer;font-family:inherit;transition:all .2s;flex-shrink:0;}
 .loc-card-retry:hover{border-color:var(--blue);color:var(--blue);}
 
-/* PROVINCE BAR */
 .prov-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .prov-bar-label{font-size:11px;color:var(--t2);white-space:nowrap;font-weight:600;}
 .prov-select{background:var(--s2);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-size:12px;font-family:inherit;padding:6px 10px;outline:none;cursor:pointer;flex:1;max-width:220px;}
@@ -63,19 +60,16 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .rb-north{background:rgba(76,201,240,0.15);color:var(--blue);}
 .rb-central{background:rgba(255,183,3,0.15);color:var(--accent);}
 .rb-south{background:rgba(6,214,160,0.15);color:var(--green);}
-
 .reg-diff{font-size:10px;padding:2px 7px;border-radius:8px;margin-left:4px;}
 .reg-diff.higher{background:rgba(6,214,160,0.15);color:var(--green);}
 .reg-diff.lower{background:rgba(230,57,70,0.15);color:var(--primary);}
 .reg-diff.same{background:rgba(160,160,160,0.1);color:var(--t3);}
 
-/* PRICE NOTICE */
 .price-notice{background:linear-gradient(135deg,rgba(255,183,3,0.12),rgba(230,57,70,0.08));border:1px solid rgba(255,183,3,0.3);border-radius:12px;padding:12px 16px;margin:14px auto 0;max-width:760px;display:flex;align-items:center;gap:12px;}
 .pn-icon{font-size:20px;flex-shrink:0;}
 .pn-text{font-size:12px;color:var(--t2);line-height:1.6;}
 .pn-text strong{color:var(--accent);}
 
-/* UPDATE BANNER */
 .price-banner{background:linear-gradient(90deg,rgba(6,214,160,0.12),rgba(255,183,3,0.08),rgba(6,214,160,0.12));border-bottom:1px solid rgba(6,214,160,0.25);overflow:hidden;max-height:0;transition:max-height .5s ease;}
 .price-banner.show{max-height:60px;}
 .pb-inner{padding:10px 16px;display:flex;align-items:center;gap:12px;max-width:1280px;margin:0 auto;}
@@ -85,7 +79,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .pb-time{font-size:11px;color:var(--t2);margin-top:1px;}
 .pb-badge{background:rgba(6,214,160,0.15);border:1px solid rgba(6,214,160,0.3);color:var(--green);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;flex-shrink:0;}
 
-/* HEADER */
 .hdr{background:linear-gradient(135deg,#1a0000,#0D0D0D 60%);border-bottom:1px solid var(--border2);position:sticky;top:0;z-index:100;}
 .hdr-inner{max-width:1280px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:12px;height:60px;}
 .logo{font-family:'Oswald',sans-serif;font-size:19px;font-weight:700;color:var(--primary);flex-shrink:0;}
@@ -100,26 +93,32 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .clock-t{font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;line-height:1;}
 .clock-d{font-size:10px;color:var(--t2);}
 
-/* HERO */
 .hero{padding:32px 16px 20px;text-align:center;background:linear-gradient(135deg,rgba(230,57,70,0.07),transparent 60%);}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,183,3,0.1);border:1px solid rgba(255,183,3,0.28);border-radius:20px;padding:5px 14px;font-size:11px;color:var(--accent);font-weight:600;margin-bottom:12px;}
 .hero h1{font-family:'Oswald',sans-serif;font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.1;margin-bottom:8px;}
 .hero h1 span{color:var(--primary);}
 .hero p{color:var(--t2);font-size:13px;max-width:480px;margin:0 auto;}
-.price-time-block{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap;}
-.ptb-card{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border2);border-radius:12px;padding:9px 16px;flex-wrap:wrap;}
-.ptb-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.ptb-dot.live{background:var(--accent);box-shadow:0 0 8px var(--accent);}
-.ptb-label{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;}
-.ptb-value{font-size:14px;font-weight:700;color:var(--text);font-family:'Oswald',sans-serif;}
-.ptb-value.accent{color:var(--accent);}
-.ptb-divider{width:1px;height:28px;background:var(--border2);}
 
-/* MAIN GRID */
+/* ── DATE TWIN BLOCK ── */
+.date-twin{display:inline-flex;align-items:stretch;border-radius:14px;overflow:hidden;border:1px solid var(--border2);margin-top:18px;background:var(--surface);}
+.dt-half{padding:12px 20px;display:flex;align-items:center;gap:10px;min-width:160px;}
+.dt-half.eff{border-right:1px solid var(--border2);}
+.dt-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.dt-dot.eff{background:var(--accent);box-shadow:0 0 8px rgba(255,183,3,.6);}
+.dt-dot.now{background:var(--green);box-shadow:0 0 8px rgba(6,214,160,.6);animation:pulse 1.8s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+.dt-text{}
+.dt-label{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;}
+.dt-main{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;line-height:1;}
+.dt-main.eff{color:var(--accent);}
+.dt-main.now{color:var(--green);}
+.dt-sub{font-size:10px;color:var(--t3);margin-top:3px;}
+@media(max-width:520px){.date-twin{flex-direction:column;}
+  .dt-half.eff{border-right:none;border-bottom:1px solid var(--border2);}
+}
+
 .main{max-width:1280px;margin:0 auto;padding:20px 14px 60px;display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start;}
 @media(max-width:900px){.main{grid-template-columns:1fr;}}
-
-/* CARDS */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:18px;}
 .card:last-child{margin-bottom:0;}
 .ch{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
@@ -129,8 +128,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .ci.amb{background:rgba(255,183,3,0.15);}
 .ci.blu{background:rgba(76,201,240,0.15);}
 .ci.grn{background:rgba(6,214,160,0.15);}
-
-/* VEHICLE TABS */
 .cat-tabs{display:flex;border-bottom:1px solid var(--border);}
 .cat-tab{flex:1;padding:12px 8px;text-align:center;font-size:12px;font-weight:600;cursor:pointer;color:var(--t2);border:none;background:transparent;transition:all .2s;border-bottom:2px solid transparent;font-family:inherit;}
 .cat-tab.active{color:var(--text);border-bottom-color:var(--primary);}
@@ -140,14 +137,10 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .sub-tab.active{color:var(--text);background:var(--s3);border-bottom:2px solid var(--primary);}
 .tab-panel{display:none;}
 .tab-panel.active{display:block;}
-
-/* BRAND GRID */
 .brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:7px;padding:14px;}
 .brand-btn{background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:10px 6px;text-align:center;cursor:pointer;transition:all .2s;font-size:11px;font-weight:500;color:var(--t2);font-family:inherit;width:100%;}
 .brand-btn:hover,.brand-btn.sel{border-color:var(--primary);color:var(--primary);background:rgba(230,57,70,0.08);}
 .brand-logo{font-size:19px;margin-bottom:3px;}
-
-/* MODELS */
 .model-wrap{border-top:1px solid var(--border);}
 .model-search-wrap{padding:10px 14px 6px;}
 .model-list{max-height:260px;overflow-y:auto;padding:6px 10px 10px;}
@@ -163,8 +156,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .bd{background:rgba(76,201,240,0.15);color:var(--blue);}
 .bh{background:rgba(6,214,160,0.15);color:var(--green);}
 .bev{background:rgba(6,214,160,0.2);color:var(--green);}
-
-/* VEHICLE INFO */
 .vinfo{background:var(--s2);border-radius:10px;padding:14px;margin:0 14px 14px;display:none;}
 .vinfo.show{display:block;}
 .vinfo-name{font-size:14px;font-weight:700;margin-bottom:10px;}
@@ -172,8 +163,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .vs{background:var(--s3);border-radius:8px;padding:9px;text-align:center;}
 .vs-v{font-size:16px;font-weight:700;color:var(--accent);}
 .vs-l{font-size:10px;color:var(--t2);margin-top:2px;}
-
-/* FORM ELEMENTS */
 .fg{margin-bottom:14px;}
 .fl{font-size:12px;color:var(--t2);font-weight:500;margin-bottom:5px;display:block;}
 .fi{width:100%;background:var(--s2);border:1px solid var(--border2);border-radius:8px;padding:9px 13px;color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s;}
@@ -181,16 +170,12 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .fsel{width:100%;background:var(--s2);border:1px solid var(--border2);border-radius:8px;padding:9px 13px;color:var(--text);font-size:14px;font-family:inherit;outline:none;appearance:none;cursor:pointer;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 @media(max-width:480px){.frow{grid-template-columns:1fr;}}
-
-/* FUEL SELECTOR */
 .fuel-sel{display:flex;gap:7px;margin-bottom:14px;}
 .fo{flex:1;padding:9px 4px;border-radius:8px;border:1px solid var(--border);background:var(--s2);text-align:center;cursor:pointer;font-size:11px;font-weight:600;color:var(--t2);transition:all .2s;}
 .fo small{display:block;font-size:9px;font-weight:400;opacity:.7;margin-top:1px;}
 .fo.ae{border-color:var(--accent);color:var(--accent);background:rgba(255,183,3,0.07);}
 .fo.ar{border-color:var(--primary);color:var(--primary);background:rgba(230,57,70,0.07);}
 .fo.ad{border-color:var(--blue);color:var(--blue);background:rgba(76,201,240,0.07);}
-
-/* RESULT */
 .result{background:linear-gradient(135deg,rgba(230,57,70,0.11),rgba(230,57,70,0.03));border:1px solid rgba(230,57,70,0.22);border-radius:11px;padding:18px;margin-top:14px;display:none;}
 .result.show{display:block;}
 .r-main{text-align:center;margin-bottom:14px;}
@@ -201,12 +186,8 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .ri{background:var(--surface);border-radius:8px;padding:10px;text-align:center;}
 .ri-v{font-size:17px;font-weight:700;}
 .ri-l{font-size:10px;color:var(--t2);margin-top:2px;}
-
-/* BUTTON */
 .btn{width:100%;background:var(--primary);color:#fff;border:none;border-radius:9px;padding:13px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;}
 .btn:hover{background:var(--primary-dark);transform:translateY(-1px);}
-
-/* MANUAL */
 .manual-body{padding:18px;}
 .ai-lookup-box{background:var(--s2);border:1px solid var(--border2);border-radius:10px;padding:14px;margin-top:14px;display:none;}
 .ai-lookup-box.show{display:block;}
@@ -220,8 +201,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .alb-note{font-size:11px;color:var(--t3);margin-top:8px;line-height:1.5;}
 .spin{display:inline-block;width:14px;height:14px;border:2px solid var(--border2);border-top-color:var(--primary);border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0;}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* PRICE TABLE */
 .ptable{width:100%;border-collapse:collapse;}
 .ptable th{font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:.4px;padding:9px 15px;text-align:left;border-bottom:1px solid var(--border2);}
 .ptable td{padding:11px 15px;font-size:13px;border-bottom:1px solid var(--border);}
@@ -233,76 +212,50 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
 .up{background:rgba(6,214,160,0.15);color:var(--green);}
 .down{background:rgba(230,57,70,0.15);color:var(--primary);}
 .nc{background:rgba(160,160,160,0.1);color:var(--t3);}
-
-/* PRICE STATUS ROW */
 .price-status-row{padding:10px 15px;background:var(--s2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .psr-left{display:flex;align-items:center;gap:6px;flex:1;}
-.psr-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.psr-dot.live{background:var(--accent);}
-.psr-dot.manual{background:var(--green);animation:pulsedot 1.5s infinite;}
-@keyframes pulsedot{0%,100%{opacity:1;}50%{opacity:.4;}}
-.psr-status{font-size:11px;font-weight:700;}
-.psr-status.live{color:var(--accent);}
-.psr-status.manual{color:var(--green);}
+.psr-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+.psr-status{font-size:11px;font-weight:700;color:var(--accent);}
 .psr-time-big{font-size:13px;font-weight:700;color:var(--accent);font-family:'Oswald',sans-serif;}
 .upd{font-size:11px;color:var(--t3);padding:9px 15px;border-top:1px solid var(--border);}
-
-/* CUSTOM PRICE */
-.custom-price{padding:12px 15px;border-top:1px solid var(--border);}
-.slbl{font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;}
-.fi-sm{font-size:12px;padding:7px 10px;}
-
-/* TIPS */
 .tips{display:grid;gap:9px;padding:14px;}
 .tip{background:var(--s2);border-radius:8px;padding:11px;display:flex;gap:9px;}
 .tip-ico{font-size:17px;flex-shrink:0;}
 .tip-t{font-size:12px;color:var(--t2);line-height:1.5;}
 .tip-t strong{color:var(--text);}
-
-/* SIDEBAR SPECIFIC */
 .sidebar{display:flex;flex-direction:column;}
-.sidebar .card{margin-bottom:18px;}
-.sidebar .card:last-child{margin-bottom:0;}
-
-/* LOCAL PRICE SIDEBAR */
 .local-price-row{background:var(--s2);border-radius:9px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;}
-
-/* STATS */
 .stat-box{background:var(--s2);border-radius:10px;padding:12px;margin-bottom:10px;}
 .stat-box:last-child{margin-bottom:0;}
 .stat-label{font-size:11px;color:var(--t2);margin-bottom:4px;}
 .stat-value{font-size:16px;font-weight:700;font-family:'Oswald',sans-serif;}
 .stat-sub{font-size:10px;color:var(--t3);margin-top:2px;}
-
-/* FUEL GUIDE */
 .fuel-guide-item{padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid var(--border);}
 .fuel-guide-item:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0;}
 </style>
 </head>
 <body>
 
-<!-- LOCATION PERMISSION MODAL -->
 <div class="loc-modal hidden" id="loc-modal">
   <div class="loc-box">
     <div class="loc-top">
       <span class="loc-icon">📍</span>
       <div class="loc-title">Giá xăng theo khu vực</div>
-      <div class="loc-sub">Cho phép XăngVN biết vị trí của bạn để hiển thị giá xăng dầu chính xác tại tỉnh/thành phố bạn đang ở.</div>
+      <div class="loc-sub">Cho phép XăngVN biết vị trí để hiển thị giá xăng chính xác tại tỉnh/thành của bạn.</div>
     </div>
     <div class="loc-body">
-      <div class="loc-benefit"><span class="loc-benefit-ico">⛽</span><div><strong>Giá xăng địa phương</strong> — Xem giá xăng dao động thực tế tại tỉnh/thành của bạn so với giá chuẩn toàn quốc.</div></div>
-      <div class="loc-benefit"><span class="loc-benefit-ico">💰</span><div><strong>Tính chi phí chính xác hơn</strong> — Sử dụng giá khu vực để ước tính chi phí nhiên liệu thực tế.</div></div>
-      <div class="loc-benefit"><span class="loc-benefit-ico">🔒</span><div><strong>Quyền riêng tư</strong> — Vị trí chỉ dùng để xác định tỉnh/thành, không lưu trữ hay gửi đi đâu.</div></div>
+      <div class="loc-benefit"><span class="loc-benefit-ico">⛽</span><div><strong>Giá xăng địa phương</strong> — Xem giá dao động thực tế tại khu vực bạn ở.</div></div>
+      <div class="loc-benefit"><span class="loc-benefit-ico">💰</span><div><strong>Tính chi phí chính xác hơn</strong> — Sử dụng giá khu vực thay giá toàn quốc.</div></div>
+      <div class="loc-benefit"><span class="loc-benefit-ico">🔒</span><div><strong>Quyền riêng tư</strong> — Vị trí chỉ dùng xác định tỉnh, không lưu trữ.</div></div>
       <div class="loc-btns">
         <button class="loc-btn-allow" onclick="requestLocation()">📍 Cho phép xác định vị trí</button>
         <button class="loc-btn-skip" onclick="skipLocation()">Không, dùng giá toàn quốc</button>
       </div>
-      <div class="loc-note">Hoặc bạn có thể chọn thủ công tỉnh/thành phố bên dưới bất kỳ lúc nào.</div>
+      <div class="loc-note">Hoặc chọn thủ công tỉnh/thành phố bên dưới bất kỳ lúc nào.</div>
     </div>
   </div>
 </div>
 
-<!-- UPDATE BANNER -->
 <div class="price-banner" id="price-banner">
   <div class="pb-inner">
     <div class="pb-icon">🔔</div>
@@ -310,19 +263,18 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
       <div class="pb-title" id="pb-title">Giá xăng đã được cập nhật!</div>
       <div class="pb-time" id="pb-time"></div>
     </div>
-    <div class="pb-badge" id="pb-badge">MỚI NHẤT</div>
+    <div class="pb-badge">MỚI NHẤT</div>
   </div>
 </div>
 
-<!-- HEADER -->
 <header class="hdr">
   <div class="hdr-inner">
     <div class="logo">XĂNG<span>VN</span></div>
     <div class="price-scroll">
-      <div class="pc"><span class="pc-n">E5 RON92</span><span class="pc-v" id="hp-e5">23.320đ</span></div>
-      <div class="pc"><span class="pc-n">RON95-III</span><span class="pc-v" id="hp-r95">24.330đ</span></div>
-      <div class="pc"><span class="pc-n">Dầu Diesel</span><span class="pc-v d" id="hp-dsl">35.440đ</span></div>
-      <div class="pc"><span class="pc-n">Dầu Hỏa</span><span class="pc-v d" id="hp-ker">35.380đ</span></div>
+      <div class="pc"><span class="pc-n">E5 RON92</span><span class="pc-v" id="hp-e5">—</span></div>
+      <div class="pc"><span class="pc-n">RON95-III</span><span class="pc-v" id="hp-r95">—</span></div>
+      <div class="pc"><span class="pc-n">Dầu Diesel</span><span class="pc-v d" id="hp-dsl">—</span></div>
+      <div class="pc"><span class="pc-n">Dầu Hỏa</span><span class="pc-v d" id="hp-ker">—</span></div>
       <div class="pc" id="hpc-loc" style="display:none;border-color:rgba(76,201,240,0.3);">
         <span class="pc-n">📍</span><span class="pc-v" style="color:var(--blue);font-size:11px;" id="hp-loc">—</span>
       </div>
@@ -334,88 +286,69 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
   </div>
 </header>
 
-<!-- PROVINCE PICKER BAR -->
-<div class="prov-bar" id="prov-bar">
+<div class="prov-bar">
   <span class="prov-bar-label">📍 Khu vực:</span>
   <select class="prov-select" id="prov-select" onchange="onProvinceChange()">
     <option value="">— Toàn quốc —</option>
     <optgroup label="Miền Bắc">
-      <option value="ha-noi">Hà Nội</option>
-      <option value="hai-phong">Hải Phòng</option>
-      <option value="quang-ninh">Quảng Ninh</option>
-      <option value="bac-ninh">Bắc Ninh</option>
-      <option value="hung-yen">Hưng Yên</option>
-      <option value="thai-nguyen">Thái Nguyên</option>
-      <option value="vinh-phuc">Vĩnh Phúc</option>
-      <option value="nam-dinh">Nam Định</option>
+      <option value="ha-noi">Hà Nội</option><option value="hai-phong">Hải Phòng</option>
+      <option value="quang-ninh">Quảng Ninh</option><option value="bac-ninh">Bắc Ninh</option>
+      <option value="hung-yen">Hưng Yên</option><option value="thai-nguyen">Thái Nguyên</option>
+      <option value="vinh-phuc">Vĩnh Phúc</option><option value="nam-dinh">Nam Định</option>
       <option value="hai-duong">Hải Dương</option>
     </optgroup>
     <optgroup label="Miền Trung">
-      <option value="da-nang">Đà Nẵng</option>
-      <option value="hue">Thừa Thiên Huế</option>
-      <option value="quang-nam">Quảng Nam</option>
-      <option value="quang-ngai">Quảng Ngãi</option>
-      <option value="binh-dinh">Bình Định</option>
-      <option value="khanh-hoa">Khánh Hòa</option>
-      <option value="ninh-thuan">Ninh Thuận</option>
-      <option value="binh-thuan">Bình Thuận</option>
-      <option value="dak-lak">Đắk Lắk</option>
-      <option value="gia-lai">Gia Lai</option>
+      <option value="da-nang">Đà Nẵng</option><option value="hue">Thừa Thiên Huế</option>
+      <option value="quang-nam">Quảng Nam</option><option value="quang-ngai">Quảng Ngãi</option>
+      <option value="binh-dinh">Bình Định</option><option value="khanh-hoa">Khánh Hòa</option>
+      <option value="ninh-thuan">Ninh Thuận</option><option value="binh-thuan">Bình Thuận</option>
+      <option value="dak-lak">Đắk Lắk</option><option value="gia-lai">Gia Lai</option>
     </optgroup>
     <optgroup label="Miền Nam">
-      <option value="ho-chi-minh">TP. Hồ Chí Minh</option>
-      <option value="binh-duong">Bình Dương</option>
-      <option value="dong-nai">Đồng Nai</option>
-      <option value="ba-ria-vung-tau">Bà Rịa - Vũng Tàu</option>
-      <option value="long-an">Long An</option>
-      <option value="tien-giang">Tiền Giang</option>
-      <option value="ben-tre">Bến Tre</option>
-      <option value="can-tho">Cần Thơ</option>
-      <option value="an-giang">An Giang</option>
-      <option value="kien-giang">Kiên Giang</option>
-      <option value="soc-trang">Sóc Trăng</option>
-      <option value="ca-mau">Cà Mau</option>
+      <option value="ho-chi-minh">TP. Hồ Chí Minh</option><option value="binh-duong">Bình Dương</option>
+      <option value="dong-nai">Đồng Nai</option><option value="ba-ria-vung-tau">Bà Rịa - Vũng Tàu</option>
+      <option value="long-an">Long An</option><option value="tien-giang">Tiền Giang</option>
+      <option value="ben-tre">Bến Tre</option><option value="can-tho">Cần Thơ</option>
+      <option value="an-giang">An Giang</option><option value="kien-giang">Kiên Giang</option>
+      <option value="soc-trang">Sóc Trăng</option><option value="ca-mau">Cà Mau</option>
     </optgroup>
   </select>
   <span class="prov-detected hidden" id="prov-detected">✓ Đã tự động xác định</span>
   <span class="prov-region-badge" id="prov-region-badge" style="display:none;"></span>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-  <div class="hero-badge">✅ Giá chính thức · Hiệu lực từ 14h00 ngày 25/03/2026</div>
+  <div class="hero-badge">✅ Giá chính thức · Liên Bộ Công Thương – Tài chính</div>
   <h1>Tính <span>Chi Phí Xăng</span><br>Cho Xe Của Bạn</h1>
   <p>Chọn loại xe · hãng xe · dòng xe — hoặc nhập tên xe để tra cứu thông số tự động</p>
 
-  <div class="price-time-block">
-    <div class="ptb-card">
-      <div class="ptb-dot live"></div>
-      <div>
-        <div class="ptb-label">Trạng thái giá</div>
-        <div class="ptb-value" style="color:var(--accent);" id="ptb-status">Chính thức ✓</div>
+  <!-- ══ DATE TWIN BLOCK ══ -->
+  <div class="date-twin">
+    <div class="dt-half eff">
+      <div class="dt-dot eff"></div>
+      <div class="dt-text">
+        <div class="dt-label">⚡ Giá hiệu lực từ</div>
+        <div class="dt-main eff" id="dt-eff">00h · 27/03/2026</div>
+        <div class="dt-sub" id="dt-eff-src">Liên Bộ Công Thương</div>
       </div>
-      <div class="ptb-divider"></div>
-      <div>
-        <div class="ptb-label">Hiệu lực từ</div>
-        <div class="ptb-value accent">14h · 25/03/2026</div>
-      </div>
-      <div class="ptb-divider"></div>
-      <div>
-        <div class="ptb-label">Nguồn</div>
-        <div class="ptb-value" style="font-size:12px;">Bộ Công Thương</div>
+    </div>
+    <div class="dt-half">
+      <div class="dt-dot now"></div>
+      <div class="dt-text">
+        <div class="dt-label">🕐 Hôm nay</div>
+        <div class="dt-main now" id="dt-now">—</div>
+        <div class="dt-sub" id="dt-now-sub">—</div>
       </div>
     </div>
   </div>
 
-  <!-- PRICE NOTICE -->
   <div class="price-notice">
     <div class="pn-icon">ℹ️</div>
     <div class="pn-text">
-      Giá xăng dầu <strong>giảm mạnh</strong> từ 14h ngày 25/3/2026: RON95 giảm 3.880đ, E5 giảm 2.040đ, Diesel giảm 1.770đ so với kỳ trước.
+      Giá xăng dầu <strong>giảm mạnh</strong> từ 00h ngày 27/3/2026: RON95 −5.620đ, E5 −4.750đ, Diesel −2.450đ so với kỳ trước.
     </div>
   </div>
 
-  <!-- LOCATION CARD -->
   <div class="loc-card" id="loc-card">
     <div class="loc-card-icon">📍</div>
     <div class="loc-card-info">
@@ -434,13 +367,8 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
   </div>
 </div>
 
-<!-- MAIN 2-COLUMN LAYOUT -->
 <div class="main">
-
-  <!-- LEFT COLUMN -->
-  <div class="left-col">
-
-    <!-- VEHICLE SELECTOR -->
+  <div>
     <div class="card">
       <div class="ch"><div class="ci red">🚙</div><h2>Chọn Loại Xe</h2></div>
       <div class="cat-tabs">
@@ -455,26 +383,18 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
       <div class="tab-panel active" id="panel-list">
         <div class="brand-grid" id="brand-grid"></div>
         <div class="model-wrap" id="model-wrap" style="display:none;">
-          <div class="model-search-wrap">
-            <input type="text" class="fi" id="model-search" placeholder="🔍 Tìm dòng xe..." oninput="filterModels()">
-          </div>
+          <div class="model-search-wrap"><input type="text" class="fi" id="model-search" placeholder="🔍 Tìm dòng xe..." oninput="filterModels()"></div>
           <div class="model-list" id="model-list"></div>
         </div>
       </div>
       <div class="tab-panel" id="panel-manual">
         <div class="manual-body">
-          <div class="fg">
-            <label class="fl">Tên hãng xe</label>
-            <input class="fi" id="m-brand" placeholder="VD: Honda, Toyota...">
-          </div>
-          <div class="fg">
-            <label class="fl">Dòng xe</label>
-            <input class="fi" id="m-model" placeholder="VD: City, Accord...">
-          </div>
+          <div class="fg"><label class="fl">Tên hãng xe</label><input class="fi" id="m-brand" placeholder="VD: Honda, Toyota..."></div>
+          <div class="fg"><label class="fl">Dòng xe</label><input class="fi" id="m-model" placeholder="VD: City, Accord..."></div>
           <button class="btn" onclick="aiLookup()">🔍 Tra cứu thông số</button>
           <div class="ai-lookup-box" id="ai-lookup-box">
             <div class="alb-status" id="alb-status"></div>
-            <div class="alb-result" id="alb-result">
+            <div class="alb-result" id="alb-result" style="display:none;">
               <div class="alb-name" id="alb-name"></div>
               <div class="alb-stats">
                 <div class="alb-s"><div class="alb-sv" id="alb-tank"></div><div class="alb-sl">Bình</div></div>
@@ -489,7 +409,6 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
       </div>
     </div>
 
-    <!-- VEHICLE INFO DISPLAY -->
     <div class="vinfo" id="vinfo">
       <div class="vinfo-name" id="vi-name">—</div>
       <div class="vinfo-stats">
@@ -499,21 +418,15 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
       </div>
     </div>
 
-    <!-- CALCULATOR -->
     <div class="card">
       <div class="ch"><div class="ci amb">💰</div><h2>Tính Chi Phí Nhiên Liệu</h2></div>
       <div style="padding:14px;">
         <div class="fg">
           <label class="fl">Loại xăng/dầu</label>
           <div class="fuel-sel">
-            <button class="fo" id="fo-e5" onclick="selFuelFn('e5')"><strong>E5</strong><small>RON92</small></button>
-            <button class="fo" id="fo-r95" onclick="selFuelFn('ron95')"><strong>RON95</strong><small>Premium</small></button>
-            <button class="fo" id="fo-dsl" onclick="selFuelFn('diesel')"><strong>Dầu</strong><small>Diesel</small></button>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font-size:11px;color:var(--t2);margin-top:10px;">
-            <div>E5: <strong id="fp-e5">23.320đ/L</strong></div>
-            <div>RON95: <strong id="fp-r95">24.330đ/L</strong></div>
-            <div>Dầu: <strong id="fp-dsl">35.440đ/L</strong></div>
+            <button class="fo ae" id="fo-e5" onclick="selFuelFn('e5')"><strong>E5</strong><small id="fp-e5">—</small></button>
+            <button class="fo" id="fo-r95" onclick="selFuelFn('ron95')"><strong>RON95</strong><small id="fp-r95">—</small></button>
+            <button class="fo" id="fo-dsl" onclick="selFuelFn('diesel')"><strong>Dầu</strong><small id="fp-dsl">—</small></button>
           </div>
         </div>
         <div class="fg">
@@ -525,18 +438,9 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
             <option value="money">Tiền N đồng</option>
           </select>
         </div>
-        <div class="fg" id="in-partial" style="display:none;">
-          <label class="fl">Số lít</label>
-          <input class="fi" id="r-p" type="number" min="0.1" step="0.1" placeholder="VD: 5.5">
-        </div>
-        <div class="fg" id="in-dist" style="display:none;">
-          <label class="fl">Quãng đường (km)</label>
-          <input class="fi" id="r-d" type="number" min="1" placeholder="VD: 100">
-        </div>
-        <div class="fg" id="in-money" style="display:none;">
-          <label class="fl">Số tiền (đ)</label>
-          <input class="fi" id="money-in" type="number" min="1000" placeholder="VD: 100000">
-        </div>
+        <div class="fg" id="in-partial" style="display:none;"><label class="fl">Số lít</label><input class="fi" id="r-p" type="number" min="0.1" step="0.1" placeholder="VD: 5.5"></div>
+        <div class="fg" id="in-dist" style="display:none;"><label class="fl">Quãng đường (km)</label><input class="fi" id="r-d" type="number" min="1" placeholder="VD: 100"></div>
+        <div class="fg" id="in-money" style="display:none;"><label class="fl">Số tiền (đ)</label><input class="fi" id="money-in" type="number" min="1000" placeholder="VD: 100000"></div>
         <button class="btn" onclick="calculate()">🧮 Tính chi phí</button>
         <div class="result" id="result">
           <div class="r-main">
@@ -552,13 +456,12 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
       </div>
     </div>
 
-    <!-- PRICE TABLE -->
     <div class="card">
       <div class="ch"><div class="ci amb">📊</div><h2>Bảng Giá Xăng Dầu</h2><span id="price-table-region" style="margin-left:auto;font-size:11px;color:var(--blue);"></span></div>
       <div class="price-status-row">
         <div class="psr-left">
-          <div class="psr-dot live" id="psr-dot"></div>
-          <span class="psr-status live" id="psr-status">🟡 Chính thức</span>
+          <div class="psr-dot"></div>
+          <span class="psr-status">🟡 Chính thức</span>
           <span style="color:var(--t3);font-size:11px;">·</span>
           <span class="psr-time-big" id="psr-time-big">00h · 27/03/2026</span>
         </div>
@@ -566,330 +469,309 @@ body{background:var(--bg);color:var(--text);font-family:'Be Vietnam Pro',sans-se
       <table class="ptable">
         <thead><tr><th>Nhiên liệu</th><th>Giá/lít</th><th id="price-col-header">So kỳ trước</th></tr></thead>
         <tbody>
-          <tr><td>E5 RON 92-II</td><td><span class="pv" id="pt-e5">23.320đ</span><span id="ptl-e5" class="reg-diff" style="display:none;"></span></td><td><span class="price-change down">▼ -4.750đ</span></td></tr>
-          <tr><td>RON 95-III</td><td><span class="pv" id="pt-r95">24.330đ</span><span id="ptl-r95" class="reg-diff" style="display:none;"></span></td><td><span class="price-change down">▼ -5.620đ</span></td></tr>
-          <tr><td>Dầu Diesel 0.05S</td><td><span class="pv d" id="pt-dsl">35.440đ</span><span id="ptl-dsl" class="reg-diff" style="display:none;"></span></td><td><span class="price-change down">▼ -2.450đ</span></td></tr>
-          <tr><td>Dầu Hỏa</td><td><span class="pv k" id="pt-ker">35.380đ</span></td><td><span class="price-change down">▼ -970đ</span></td></tr>
-          <tr><td>Dầu Madút</td><td><span class="pv k" id="pt-maz">21.740đ/kg</span></td><td><span class="price-change up">▲ +1.500đ</span></td></tr>
+          <tr><td>E5 RON 92-II</td><td><span class="pv" id="pt-e5">—</span><span id="ptl-e5" class="reg-diff" style="display:none;"></span></td><td><span class="price-change down">▼ -4.750đ</span></td></tr>
+          <tr><td>RON 95-III</td><td><span class="pv" id="pt-r95">—</span><span id="ptl-r95" class="reg-diff" style="display:none;"></span></td><td><span class="price-change down">▼ -5.620đ</span></td></tr>
+          <tr><td>Dầu Diesel 0.05S</td><td><span class="pv d" id="pt-dsl">—</span><span id="ptl-dsl" class="reg-diff" style="display:none;"></span></td><td><span class="price-change down">▼ -2.450đ</span></td></tr>
+          <tr><td>Dầu Hỏa</td><td><span class="pv k" id="pt-ker">—</span></td><td><span class="price-change down">▼ -970đ</span></td></tr>
+          <tr><td>Dầu Madút</td><td><span class="pv k" id="pt-maz">—</span></td><td><span class="price-change up">▲ +1.500đ</span></td></tr>
         </tbody>
       </table>
-      <div class="upd" id="upd-text">📅 Hiệu lực từ 00h00 ngày 27/03/2026 · Nguồn: Liên Bộ Công Thương – Tài chính / QĐ 482/QĐ-TTg</div>
+      <div class="upd" id="upd-text">📅 Đang tải...</div>
     </div>
+  </div>
 
-  </div><!-- END LEFT COLUMN -->
-
-  <!-- RIGHT COLUMN (SIDEBAR) -->
   <div class="sidebar">
-
-    <!-- LOCAL PRICE CARD -->
     <div class="card" id="local-price-card" style="display:none;">
       <div class="ch"><div class="ci grn">📍</div><h2 id="local-card-title">Giá xăng khu vực</h2></div>
       <div style="padding:14px;">
-        <div style="font-size:12px;color:var(--t2);margin-bottom:12px;line-height:1.6;" id="local-card-desc">Giá xăng tại khu vực của bạn có thể chênh lệch so với giá chuẩn toàn quốc do chi phí vận chuyển.</div>
+        <div style="font-size:12px;color:var(--t2);margin-bottom:12px;line-height:1.6;" id="local-card-desc"></div>
         <div style="display:grid;gap:8px;" id="local-price-rows"></div>
         <div style="font-size:10px;color:var(--t3);margin-top:10px;line-height:1.5;" id="local-price-note"></div>
       </div>
     </div>
 
-    <!-- TIPS -->
     <div class="card">
       <div class="ch"><div class="ci amb">💡</div><h2>Mẹo Tiết Kiệm Xăng</h2></div>
       <div class="tips">
         <div class="tip"><div class="tip-ico">🏎️</div><div class="tip-t"><strong>Giữ tốc độ 60–80 km/h</strong> giúp tiết kiệm 20–30% so với lái nhanh-phanh gấp.</div></div>
         <div class="tip"><div class="tip-ico">🌡️</div><div class="tip-t"><strong>Kiểm tra áp suất lốp</strong> đúng tiêu chuẩn giảm tiêu hao 3–5% nhiên liệu.</div></div>
-        <div class="tip"><div class="tip-ico">⚙️</div><div class="tip-t"><strong>Bảo dưỡng định kỳ:</strong> thay lọc gió, bugi, dầu nhớt đúng hạn giữ xe vận hành tối ưu.</div></div>
-        <div class="tip"><div class="tip-ico">❄️</div><div class="tip-t"><strong>Hạn chế điều hòa</strong> khi không cần thiết — máy lạnh tiêu tốn 10–20% công suất động cơ.</div></div>
+        <div class="tip"><div class="tip-ico">⚙️</div><div class="tip-t"><strong>Bảo dưỡng định kỳ:</strong> thay lọc gió, bugi, dầu nhớt đúng hạn.</div></div>
+        <div class="tip"><div class="tip-ico">❄️</div><div class="tip-t"><strong>Hạn chế điều hòa</strong> khi không cần thiết — máy lạnh tiêu 10–20% công suất.</div></div>
       </div>
     </div>
 
-    <!-- QUICK STATS -->
     <div class="card">
       <div class="ch"><div class="ci blu">📈</div><h2>Thống Kê Nhanh</h2></div>
       <div style="padding:14px;">
         <div class="stat-box">
-          <div class="stat-label">Xăng rẻ nhất hôm nay</div>
-          <div class="stat-value" style="color:var(--green);">23.320đ</div>
+          <div class="stat-label">Xăng rẻ nhất hiện tại</div>
+          <div class="stat-value" style="color:var(--green);" id="stat-cheapest">—</div>
           <div class="stat-sub">E5 RON92</div>
         </div>
         <div class="stat-box">
-          <div class="stat-label">Xăng đắt nhất hôm nay</div>
-          <div class="stat-value" style="color:var(--primary);">35.440đ</div>
-          <div class="stat-sub">Dầu Diesel 0.05S</div>
+          <div class="stat-label">Xu hướng kỳ này</div>
+          <div style="font-size:14px;font-weight:700;margin-top:4px;"><span style="color:var(--green);">▼ Giảm</span> <span style="color:var(--t3);font-size:12px;">toàn bộ mặt hàng</span></div>
         </div>
         <div class="stat-box" style="margin-bottom:0;">
-          <div class="stat-label">Xu hướng tuần này</div>
-          <div style="font-size:14px;font-weight:700;margin-top:4px;"><span style="color:var(--green);">▼ Giảm</span> <span style="color:var(--t3);font-size:12px;">trung bình 3%</span></div>
+          <div class="stat-label">Kỳ điều chỉnh tiếp theo (dự kiến)</div>
+          <div class="stat-value" style="color:var(--accent);">06/04/2026</div>
+          <div class="stat-sub">Cách 10 ngày một lần</div>
         </div>
       </div>
     </div>
 
-    <!-- FUEL GUIDE -->
     <div class="card">
       <div class="ch"><div class="ci grn">🔋</div><h2>Hướng Dẫn Chọn Xăng</h2></div>
       <div style="padding:14px;font-size:12px;">
-        <div class="fuel-guide-item">
-          <div style="color:var(--accent);font-weight:700;margin-bottom:4px;">E5 RON92</div>
-          <div style="color:var(--t2);line-height:1.5;">Xe máy, ô tô cũ, tiết kiệm chi phí</div>
-        </div>
-        <div class="fuel-guide-item">
-          <div style="color:var(--primary);font-weight:700;margin-bottom:4px;">RON95-III</div>
-          <div style="color:var(--t2);line-height:1.5;">Ô tô hiện đại, tăng hiệu năng động cơ</div>
-        </div>
-        <div class="fuel-guide-item">
-          <div style="color:var(--blue);font-weight:700;margin-bottom:4px;">Dầu Diesel</div>
-          <div style="color:var(--t2);line-height:1.5;">Xe tải, xe buýt, tầm chạy dài hơn</div>
-        </div>
+        <div class="fuel-guide-item"><div style="color:var(--accent);font-weight:700;margin-bottom:4px;">E5 RON92</div><div style="color:var(--t2);line-height:1.5;">Xe máy, ô tô cũ, tiết kiệm chi phí</div></div>
+        <div class="fuel-guide-item"><div style="color:var(--primary);font-weight:700;margin-bottom:4px;">RON95-III</div><div style="color:var(--t2);line-height:1.5;">Ô tô hiện đại, tăng hiệu năng động cơ</div></div>
+        <div class="fuel-guide-item"><div style="color:var(--blue);font-weight:700;margin-bottom:4px;">Dầu Diesel</div><div style="color:var(--t2);line-height:1.5;">Xe tải, xe buýt, tầm chạy dài hơn</div></div>
       </div>
     </div>
-
-  </div><!-- END SIDEBAR -->
-
-</div><!-- END MAIN -->
+  </div>
+</div>
 
 <script>
-// ============================================================
-// PRICE STATE — Giá chính thức hiệu lực 00h00 ngày 27/03/2026
-// ============================================================
-let PRICES = {
-  e5:       23320,
-  ron95:    24330,
-  diesel:   35440,
-  kerosene: 35380,
-  mazut:    21740
+// ================================================================
+// GIÁ XĂNG CHÍNH THỨC — hiệu lực 00h00 ngày 27/03/2026
+// Nguồn: Quyết định Liên Bộ Công Thương – Tài chính
+// ================================================================
+const PRICE_INFO = {
+  effectiveDate: new Date(2026, 2, 27, 0, 0, 0),  // 27/03/2026 00:00
+  effectiveLabel: '00h · 27/03/2026',
+  source: 'Liên Bộ Công Thương – Tài chính',
 };
 
+let PRICES = {e5:23320, ron95:24330, diesel:35440, kerosene:35380, mazut:21740};
 let selFuelType = 'e5';
 let curVehicle = null;
 let localPrices = null;
 let aiLookupResult = null;
 
-// ============================================================
-// REGION DATA
-// ============================================================
+const DAYS = ['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+function pad(x){return String(x).padStart(2,'0');}
+function fmt(n){return (n||0).toLocaleString('vi-VN');}
+function fmtDate(d){return d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();}
+
+// ── CLOCK + LIVE DATE BLOCK ──────────────────────────────────
+function tick() {
+  const now = new Date();
+  // Header clock
+  document.getElementById('clock').textContent =
+    pad(now.getHours())+':'+pad(now.getMinutes())+':'+pad(now.getSeconds());
+  document.getElementById('clock-d').textContent =
+    DAYS[now.getDay()]+' '+fmtDate(now);
+
+  // "Hôm nay" side of the date twin — live
+  document.getElementById('dt-now').textContent = fmtDate(now);
+  document.getElementById('dt-now-sub').textContent =
+    DAYS[now.getDay()]+' · '+pad(now.getHours())+':'+pad(now.getMinutes());
+}
+setInterval(tick, 1000);
+tick();
+
+// ── RENDER STATIC EFFECTIVE DATE ────────────────────────────
+function renderEffectiveDate(label, source) {
+  const lbl = label || PRICE_INFO.effectiveLabel;
+  const src  = source || PRICE_INFO.source;
+  document.getElementById('dt-eff').textContent     = lbl;
+  document.getElementById('dt-eff-src').textContent = src;
+  document.getElementById('psr-time-big').textContent = lbl;
+  document.getElementById('upd-text').textContent =
+    '📅 Giá hiệu lực từ ' + lbl + ' · Nguồn: ' + src;
+}
+
+// ── APPLY PRICES TO ALL DOM ──────────────────────────────────
+function applyPricesToUI() {
+  document.getElementById('hp-e5').textContent  = fmt(PRICES.e5)+'đ';
+  document.getElementById('hp-r95').textContent = fmt(PRICES.ron95)+'đ';
+  document.getElementById('hp-dsl').textContent = fmt(PRICES.diesel)+'đ';
+  document.getElementById('hp-ker').textContent = fmt(PRICES.kerosene)+'đ';
+  document.getElementById('pt-e5').textContent  = fmt(PRICES.e5)+'đ';
+  document.getElementById('pt-r95').textContent = fmt(PRICES.ron95)+'đ';
+  document.getElementById('pt-dsl').textContent = fmt(PRICES.diesel)+'đ';
+  document.getElementById('pt-ker').textContent = fmt(PRICES.kerosene)+'đ';
+  document.getElementById('pt-maz').textContent = fmt(PRICES.mazut)+'đ/kg';
+  document.getElementById('fp-e5').textContent  = fmt(PRICES.e5)+'đ/L';
+  document.getElementById('fp-r95').textContent = fmt(PRICES.ron95)+'đ/L';
+  document.getElementById('fp-dsl').textContent = fmt(PRICES.diesel)+'đ/L';
+  document.getElementById('stat-cheapest').textContent = fmt(PRICES.e5)+'đ/L';
+}
+
+// ── REGION DATA ──────────────────────────────────────────────
 const REGION_DATA = {
-  'ha-noi':        {name:'Hà Nội',       region:'north', regionName:'Miền Bắc', adj:{e5:0,    ron95:0,    diesel:0}},
-  'hai-phong':     {name:'Hải Phòng',    region:'north', regionName:'Miền Bắc', adj:{e5:50,   ron95:50,   diesel:80}},
-  'quang-ninh':    {name:'Quảng Ninh',   region:'north', regionName:'Miền Bắc', adj:{e5:100,  ron95:100,  diesel:120}},
-  'bac-ninh':      {name:'Bắc Ninh',     region:'north', regionName:'Miền Bắc', adj:{e5:30,   ron95:30,   diesel:50}},
-  'hung-yen':      {name:'Hưng Yên',     region:'north', regionName:'Miền Bắc', adj:{e5:20,   ron95:20,   diesel:40}},
-  'thai-nguyen':   {name:'Thái Nguyên',  region:'north', regionName:'Miền Bắc', adj:{e5:80,   ron95:80,   diesel:100}},
-  'vinh-phuc':     {name:'Vĩnh Phúc',    region:'north', regionName:'Miền Bắc', adj:{e5:40,   ron95:40,   diesel:60}},
-  'nam-dinh':      {name:'Nam Định',     region:'north', regionName:'Miền Bắc', adj:{e5:60,   ron95:60,   diesel:80}},
-  'hai-duong':     {name:'Hải Dương',    region:'north', regionName:'Miền Bắc', adj:{e5:40,   ron95:40,   diesel:60}},
-  'da-nang':       {name:'Đà Nẵng',      region:'central', regionName:'Miền Trung', adj:{e5:100, ron95:100,  diesel:120}},
-  'hue':           {name:'Thừa Thiên Huế',region:'central',regionName:'Miền Trung', adj:{e5:120, ron95:120,  diesel:150}},
-  'quang-nam':     {name:'Quảng Nam',    region:'central', regionName:'Miền Trung', adj:{e5:130, ron95:130,  diesel:160}},
-  'quang-ngai':    {name:'Quảng Ngãi',   region:'central', regionName:'Miền Trung', adj:{e5:150, ron95:150,  diesel:180}},
-  'binh-dinh':     {name:'Bình Định',    region:'central', regionName:'Miền Trung', adj:{e5:140, ron95:140,  diesel:170}},
-  'khanh-hoa':     {name:'Khánh Hòa',   region:'central', regionName:'Miền Trung', adj:{e5:120, ron95:120,  diesel:150}},
-  'ninh-thuan':    {name:'Ninh Thuận',   region:'central', regionName:'Miền Trung', adj:{e5:160, ron95:160,  diesel:190}},
-  'binh-thuan':    {name:'Bình Thuận',   region:'central', regionName:'Miền Trung', adj:{e5:140, ron95:140,  diesel:170}},
-  'dak-lak':       {name:'Đắk Lắk',     region:'central', regionName:'Miền Trung', adj:{e5:200, ron95:200,  diesel:250}},
-  'gia-lai':       {name:'Gia Lai',      region:'central', regionName:'Miền Trung', adj:{e5:220, ron95:220,  diesel:270}},
-  'ho-chi-minh':   {name:'TP. Hồ Chí Minh', region:'south', regionName:'Miền Nam', adj:{e5:0,   ron95:0,    diesel:0}},
-  'binh-duong':    {name:'Bình Dương',   region:'south', regionName:'Miền Nam', adj:{e5:30,   ron95:30,   diesel:50}},
-  'dong-nai':      {name:'Đồng Nai',     region:'south', regionName:'Miền Nam', adj:{e5:50,   ron95:50,   diesel:70}},
-  'ba-ria-vung-tau':{name:'Bà Rịa - Vũng Tàu',region:'south',regionName:'Miền Nam',adj:{e5:80,ron95:80,diesel:100}},
-  'long-an':       {name:'Long An',      region:'south', regionName:'Miền Nam', adj:{e5:100,  ron95:100,  diesel:120}},
-  'tien-giang':    {name:'Tiền Giang',   region:'south', regionName:'Miền Nam', adj:{e5:120,  ron95:120,  diesel:140}},
-  'ben-tre':       {name:'Bến Tre',      region:'south', regionName:'Miền Nam', adj:{e5:150,  ron95:150,  diesel:180}},
-  'can-tho':       {name:'Cần Thơ',      region:'south', regionName:'Miền Nam', adj:{e5:130,  ron95:130,  diesel:160}},
-  'an-giang':      {name:'An Giang',     region:'south', regionName:'Miền Nam', adj:{e5:180,  ron95:180,  diesel:220}},
-  'kien-giang':    {name:'Kiên Giang',   region:'south', regionName:'Miền Nam', adj:{e5:200,  ron95:200,  diesel:250}},
-  'soc-trang':     {name:'Sóc Trăng',    region:'south', regionName:'Miền Nam', adj:{e5:170,  ron95:170,  diesel:210}},
-  'ca-mau':        {name:'Cà Mau',       region:'south', regionName:'Miền Nam', adj:{e5:250,  ron95:250,  diesel:300}},
+  'ha-noi':         {name:'Hà Nội',            region:'north',   regionName:'Miền Bắc',  adj:{e5:0,   ron95:0,   diesel:0}},
+  'hai-phong':      {name:'Hải Phòng',          region:'north',   regionName:'Miền Bắc',  adj:{e5:50,  ron95:50,  diesel:80}},
+  'quang-ninh':     {name:'Quảng Ninh',         region:'north',   regionName:'Miền Bắc',  adj:{e5:100, ron95:100, diesel:120}},
+  'bac-ninh':       {name:'Bắc Ninh',           region:'north',   regionName:'Miền Bắc',  adj:{e5:30,  ron95:30,  diesel:50}},
+  'hung-yen':       {name:'Hưng Yên',           region:'north',   regionName:'Miền Bắc',  adj:{e5:20,  ron95:20,  diesel:40}},
+  'thai-nguyen':    {name:'Thái Nguyên',        region:'north',   regionName:'Miền Bắc',  adj:{e5:80,  ron95:80,  diesel:100}},
+  'vinh-phuc':      {name:'Vĩnh Phúc',          region:'north',   regionName:'Miền Bắc',  adj:{e5:40,  ron95:40,  diesel:60}},
+  'nam-dinh':       {name:'Nam Định',           region:'north',   regionName:'Miền Bắc',  adj:{e5:60,  ron95:60,  diesel:80}},
+  'hai-duong':      {name:'Hải Dương',          region:'north',   regionName:'Miền Bắc',  adj:{e5:40,  ron95:40,  diesel:60}},
+  'da-nang':        {name:'Đà Nẵng',            region:'central', regionName:'Miền Trung', adj:{e5:100, ron95:100, diesel:120}},
+  'hue':            {name:'Thừa Thiên Huế',     region:'central', regionName:'Miền Trung', adj:{e5:120, ron95:120, diesel:150}},
+  'quang-nam':      {name:'Quảng Nam',          region:'central', regionName:'Miền Trung', adj:{e5:130, ron95:130, diesel:160}},
+  'quang-ngai':     {name:'Quảng Ngãi',         region:'central', regionName:'Miền Trung', adj:{e5:150, ron95:150, diesel:180}},
+  'binh-dinh':      {name:'Bình Định',          region:'central', regionName:'Miền Trung', adj:{e5:140, ron95:140, diesel:170}},
+  'khanh-hoa':      {name:'Khánh Hòa',         region:'central', regionName:'Miền Trung', adj:{e5:120, ron95:120, diesel:150}},
+  'ninh-thuan':     {name:'Ninh Thuận',         region:'central', regionName:'Miền Trung', adj:{e5:160, ron95:160, diesel:190}},
+  'binh-thuan':     {name:'Bình Thuận',         region:'central', regionName:'Miền Trung', adj:{e5:140, ron95:140, diesel:170}},
+  'dak-lak':        {name:'Đắk Lắk',           region:'central', regionName:'Miền Trung', adj:{e5:200, ron95:200, diesel:250}},
+  'gia-lai':        {name:'Gia Lai',            region:'central', regionName:'Miền Trung', adj:{e5:220, ron95:220, diesel:270}},
+  'ho-chi-minh':    {name:'TP. Hồ Chí Minh',   region:'south',   regionName:'Miền Nam',   adj:{e5:0,   ron95:0,   diesel:0}},
+  'binh-duong':     {name:'Bình Dương',         region:'south',   regionName:'Miền Nam',   adj:{e5:30,  ron95:30,  diesel:50}},
+  'dong-nai':       {name:'Đồng Nai',           region:'south',   regionName:'Miền Nam',   adj:{e5:50,  ron95:50,  diesel:70}},
+  'ba-ria-vung-tau':{name:'Bà Rịa - Vũng Tàu', region:'south',   regionName:'Miền Nam',   adj:{e5:80,  ron95:80,  diesel:100}},
+  'long-an':        {name:'Long An',            region:'south',   regionName:'Miền Nam',   adj:{e5:100, ron95:100, diesel:120}},
+  'tien-giang':     {name:'Tiền Giang',         region:'south',   regionName:'Miền Nam',   adj:{e5:120, ron95:120, diesel:140}},
+  'ben-tre':        {name:'Bến Tre',            region:'south',   regionName:'Miền Nam',   adj:{e5:150, ron95:150, diesel:180}},
+  'can-tho':        {name:'Cần Thơ',            region:'south',   regionName:'Miền Nam',   adj:{e5:130, ron95:130, diesel:160}},
+  'an-giang':       {name:'An Giang',           region:'south',   regionName:'Miền Nam',   adj:{e5:180, ron95:180, diesel:220}},
+  'kien-giang':     {name:'Kiên Giang',         region:'south',   regionName:'Miền Nam',   adj:{e5:200, ron95:200, diesel:250}},
+  'soc-trang':      {name:'Sóc Trăng',          region:'south',   regionName:'Miền Nam',   adj:{e5:170, ron95:170, diesel:210}},
+  'ca-mau':         {name:'Cà Mau',             region:'south',   regionName:'Miền Nam',   adj:{e5:250, ron95:250, diesel:300}},
 };
 
 function guessProvinceFromCoords(lat, lng) {
-  const boxes = [
-    {key:'ha-noi',       latMin:20.5, latMax:21.4, lngMin:105.2, lngMax:106.0},
-    {key:'hai-phong',    latMin:20.5, latMax:21.0, lngMin:106.3, lngMax:107.0},
-    {key:'quang-ninh',   latMin:20.8, latMax:21.8, lngMin:106.8, lngMax:108.1},
-    {key:'bac-ninh',     latMin:21.0, latMax:21.3, lngMin:105.9, lngMax:106.2},
-    {key:'hai-duong',    latMin:20.8, latMax:21.1, lngMin:106.0, lngMax:106.5},
-    {key:'hung-yen',     latMin:20.6, latMax:21.0, lngMin:105.8, lngMax:106.2},
-    {key:'thai-nguyen',  latMin:21.3, latMax:22.0, lngMin:105.5, lngMax:106.4},
-    {key:'vinh-phuc',    latMin:21.1, latMax:21.7, lngMin:105.3, lngMax:105.9},
-    {key:'nam-dinh',     latMin:19.9, latMax:20.5, lngMin:105.8, lngMax:106.5},
-    {key:'da-nang',      latMin:15.8, latMax:16.2, lngMin:107.8, lngMax:108.4},
-    {key:'hue',          latMin:16.0, latMax:16.9, lngMin:107.0, lngMax:108.2},
-    {key:'quang-nam',    latMin:15.1, latMax:16.1, lngMin:107.5, lngMax:108.5},
-    {key:'quang-ngai',   latMin:14.6, latMax:15.3, lngMin:108.0, lngMax:109.2},
-    {key:'binh-dinh',    latMin:13.5, latMax:14.6, lngMin:108.5, lngMax:109.4},
-    {key:'khanh-hoa',    latMin:11.8, latMax:13.0, lngMin:108.5, lngMax:109.5},
-    {key:'ninh-thuan',   latMin:11.2, latMax:12.0, lngMin:108.4, lngMax:109.3},
-    {key:'binh-thuan',   latMin:10.5, latMax:11.8, lngMin:107.4, lngMax:108.9},
-    {key:'dak-lak',      latMin:12.0, latMax:13.4, lngMin:107.5, lngMax:108.9},
-    {key:'gia-lai',      latMin:13.0, latMax:14.7, lngMin:107.4, lngMax:108.9},
-    {key:'ho-chi-minh',  latMin:10.3, latMax:11.2, lngMin:106.3, lngMax:107.0},
-    {key:'binh-duong',   latMin:10.7, latMax:11.5, lngMin:106.5, lngMax:107.2},
-    {key:'dong-nai',     latMin:10.5, latMax:11.6, lngMin:106.8, lngMax:107.8},
+  const boxes=[
+    {key:'ha-noi',latMin:20.5,latMax:21.4,lngMin:105.2,lngMax:106.0},
+    {key:'hai-phong',latMin:20.5,latMax:21.0,lngMin:106.3,lngMax:107.0},
+    {key:'quang-ninh',latMin:20.8,latMax:21.8,lngMin:106.8,lngMax:108.1},
+    {key:'bac-ninh',latMin:21.0,latMax:21.3,lngMin:105.9,lngMax:106.2},
+    {key:'hai-duong',latMin:20.8,latMax:21.1,lngMin:106.0,lngMax:106.5},
+    {key:'hung-yen',latMin:20.6,latMax:21.0,lngMin:105.8,lngMax:106.2},
+    {key:'thai-nguyen',latMin:21.3,latMax:22.0,lngMin:105.5,lngMax:106.4},
+    {key:'vinh-phuc',latMin:21.1,latMax:21.7,lngMin:105.3,lngMax:105.9},
+    {key:'nam-dinh',latMin:19.9,latMax:20.5,lngMin:105.8,lngMax:106.5},
+    {key:'da-nang',latMin:15.8,latMax:16.2,lngMin:107.8,lngMax:108.4},
+    {key:'hue',latMin:16.0,latMax:16.9,lngMin:107.0,lngMax:108.2},
+    {key:'quang-nam',latMin:15.1,latMax:16.1,lngMin:107.5,lngMax:108.5},
+    {key:'quang-ngai',latMin:14.6,latMax:15.3,lngMin:108.0,lngMax:109.2},
+    {key:'binh-dinh',latMin:13.5,latMax:14.6,lngMin:108.5,lngMax:109.4},
+    {key:'khanh-hoa',latMin:11.8,latMax:13.0,lngMin:108.5,lngMax:109.5},
+    {key:'ninh-thuan',latMin:11.2,latMax:12.0,lngMin:108.4,lngMax:109.3},
+    {key:'binh-thuan',latMin:10.5,latMax:11.8,lngMin:107.4,lngMax:108.9},
+    {key:'dak-lak',latMin:12.0,latMax:13.4,lngMin:107.5,lngMax:108.9},
+    {key:'gia-lai',latMin:13.0,latMax:14.7,lngMin:107.4,lngMax:108.9},
+    {key:'ho-chi-minh',latMin:10.3,latMax:11.2,lngMin:106.3,lngMax:107.0},
+    {key:'binh-duong',latMin:10.7,latMax:11.5,lngMin:106.5,lngMax:107.2},
+    {key:'dong-nai',latMin:10.5,latMax:11.6,lngMin:106.8,lngMax:107.8},
     {key:'ba-ria-vung-tau',latMin:10.1,latMax:10.8,lngMin:107.0,lngMax:107.8},
-    {key:'long-an',      latMin:10.4, latMax:11.0, lngMin:105.5, lngMax:106.6},
-    {key:'tien-giang',   latMin:10.1, latMax:10.7, lngMin:105.8, lngMax:106.8},
-    {key:'ben-tre',      latMin:9.7,  latMax:10.4, lngMin:105.8, lngMax:106.8},
-    {key:'can-tho',      latMin:9.8,  latMax:10.4, lngMin:105.0, lngMax:105.8},
-    {key:'an-giang',     latMin:10.2, latMax:11.0, lngMin:104.5, lngMax:105.6},
-    {key:'kien-giang',   latMin:9.3,  latMax:10.5, lngMin:103.8, lngMax:105.5},
-    {key:'soc-trang',    latMin:9.2,  latMax:10.1, lngMin:105.3, lngMax:106.4},
-    {key:'ca-mau',       latMin:8.4,  latMax:9.5,  lngMin:104.5, lngMax:105.5},
+    {key:'long-an',latMin:10.4,latMax:11.0,lngMin:105.5,lngMax:106.6},
+    {key:'tien-giang',latMin:10.1,latMax:10.7,lngMin:105.8,lngMax:106.8},
+    {key:'ben-tre',latMin:9.7,latMax:10.4,lngMin:105.8,lngMax:106.8},
+    {key:'can-tho',latMin:9.8,latMax:10.4,lngMin:105.0,lngMax:105.8},
+    {key:'an-giang',latMin:10.2,latMax:11.0,lngMin:104.5,lngMax:105.6},
+    {key:'kien-giang',latMin:9.3,latMax:10.5,lngMin:103.8,lngMax:105.5},
+    {key:'soc-trang',latMin:9.2,latMax:10.1,lngMin:105.3,lngMax:106.4},
+    {key:'ca-mau',latMin:8.4,latMax:9.5,lngMin:104.5,lngMax:105.5},
   ];
-  for (const b of boxes) {
-    if (lat >= b.latMin && lat <= b.latMax && lng >= b.lngMin && lng <= b.lngMax) return b.key;
-  }
+  for(const b of boxes){if(lat>=b.latMin&&lat<=b.latMax&&lng>=b.lngMin&&lng<=b.lngMax)return b.key;}
   return null;
 }
-
-function computeLocalPrices(provinceKey) {
-  const rd = REGION_DATA[provinceKey];
-  if (!rd) return null;
+function computeLocalPrices(pKey){
+  const rd=REGION_DATA[pKey]; if(!rd)return null;
   return {
-    e5:     PRICES.e5 + rd.adj.e5,
-    ron95:  PRICES.ron95 + rd.adj.ron95,
-    diesel: PRICES.diesel + rd.adj.diesel,
-    diff_e5:   rd.adj.e5,
-    diff_r95:  rd.adj.ron95,
-    diff_dsl:  rd.adj.diesel,
-    provinceName: rd.name,
-    regionName: rd.regionName,
-    region: rd.region,
+    e5:PRICES.e5+rd.adj.e5,ron95:PRICES.ron95+rd.adj.ron95,diesel:PRICES.diesel+rd.adj.diesel,
+    diff_e5:rd.adj.e5,diff_r95:rd.adj.ron95,diff_dsl:rd.adj.diesel,
+    provinceName:rd.name,regionName:rd.regionName,region:rd.region,
   };
 }
-
-function requestLocation() {
+function requestLocation(){
   document.getElementById('loc-modal').classList.add('hidden');
-  if (!navigator.geolocation) { showManualPicker(); return; }
+  if(!navigator.geolocation)return;
   navigator.geolocation.getCurrentPosition(
-    pos => {
-      const {latitude: lat, longitude: lng} = pos.coords;
-      const pKey = guessProvinceFromCoords(lat, lng);
-      if (pKey) applyProvince(pKey, true);
-      else showManualPicker();
-    },
-    err => showManualPicker(),
-    {timeout: 8000, maximumAge: 300000}
+    pos=>{const pKey=guessProvinceFromCoords(pos.coords.latitude,pos.coords.longitude);if(pKey)applyProvince(pKey,true);},
+    ()=>{},{timeout:8000,maximumAge:300000}
   );
 }
-
-function skipLocation() { document.getElementById('loc-modal').classList.add('hidden'); }
-function showManualPicker() { document.getElementById('loc-modal').classList.add('hidden'); }
-function retryLocation() { document.getElementById('loc-modal').classList.remove('hidden'); }
-
-function onProvinceChange() {
-  const sel = document.getElementById('prov-select').value;
-  if (!sel) { clearLocalPrices(); return; }
-  applyProvince(sel, false);
+function skipLocation(){document.getElementById('loc-modal').classList.add('hidden');}
+function retryLocation(){document.getElementById('loc-modal').classList.remove('hidden');}
+function onProvinceChange(){
+  const sel=document.getElementById('prov-select').value;
+  if(!sel){clearLocalPrices();return;}
+  applyProvince(sel,false);
 }
-
-function applyProvince(pKey, autoDetected) {
-  const rd = REGION_DATA[pKey];
-  if (!rd) return;
-  document.getElementById('prov-select').value = pKey;
-  const det = document.getElementById('prov-detected');
-  det.classList.toggle('hidden', !autoDetected);
-  const rb = document.getElementById('prov-region-badge');
-  rb.style.display = '';
-  rb.textContent = rd.regionName;
-  rb.className = 'prov-region-badge rb-' + (rd.region==='north'?'north':rd.region==='central'?'central':'south');
-  document.getElementById('hpc-loc').style.display = 'flex';
-  document.getElementById('hp-loc').textContent = rd.name;
-  localPrices = computeLocalPrices(pKey);
+function applyProvince(pKey,autoDetected){
+  const rd=REGION_DATA[pKey]; if(!rd)return;
+  document.getElementById('prov-select').value=pKey;
+  document.getElementById('prov-detected').classList.toggle('hidden',!autoDetected);
+  const rb=document.getElementById('prov-region-badge');
+  rb.style.display='';rb.textContent=rd.regionName;
+  rb.className='prov-region-badge rb-'+(rd.region==='north'?'north':rd.region==='central'?'central':'south');
+  document.getElementById('hpc-loc').style.display='flex';
+  document.getElementById('hp-loc').textContent=rd.name;
+  localPrices=computeLocalPrices(pKey);
   document.getElementById('loc-card').classList.add('show');
-  document.getElementById('lc-place').textContent = rd.name + ' · ' + rd.regionName;
-  document.getElementById('lc-desc').textContent = 'Giá xăng tại ' + rd.name + ' (tham khảo, giao động thực tế)';
-  document.getElementById('lc-badge').textContent = rd.regionName.toUpperCase();
+  document.getElementById('lc-place').textContent=rd.name+' · '+rd.regionName;
+  document.getElementById('lc-desc').textContent='Giá xăng tại '+rd.name+' (tham khảo)';
+  document.getElementById('lc-badge').textContent=rd.regionName.toUpperCase();
   updateLocalPriceDisplay();
-  document.getElementById('local-price-card').style.display = '';
-  document.getElementById('local-card-title').textContent = '📍 Giá xăng tại ' + rd.name;
-  document.getElementById('local-card-desc').textContent =
-    'Giá tại ' + rd.name + ' (' + rd.regionName + ') có thể chênh lệch so với giá chuẩn toàn quốc do chi phí vận chuyển và phụ phí đại lý.';
+  document.getElementById('local-price-card').style.display='';
+  document.getElementById('local-card-title').textContent='📍 Giá tại '+rd.name;
+  document.getElementById('local-card-desc').textContent='Giá ước tính tại '+rd.name+' ('+rd.regionName+'), dao động theo chi phí vận chuyển và phụ phí đại lý.';
   renderSidebarLocalPrices();
-  document.getElementById('price-col-header').textContent = rd.name + ' so toàn quốc';
-  document.getElementById('price-table-region').textContent = '📍 ' + rd.name;
+  document.getElementById('price-col-header').textContent=rd.name+' so toàn quốc';
+  document.getElementById('price-table-region').textContent='📍 '+rd.name;
   renderTableRegionDiffs();
-  document.getElementById('fp-e5').textContent = fmt(localPrices.e5) + 'đ/L';
-  document.getElementById('fp-r95').textContent = fmt(localPrices.ron95) + 'đ/L';
-  document.getElementById('fp-dsl').textContent = fmt(localPrices.diesel) + 'đ/L';
+  document.getElementById('fp-e5').textContent=fmt(localPrices.e5)+'đ/L';
+  document.getElementById('fp-r95').textContent=fmt(localPrices.ron95)+'đ/L';
+  document.getElementById('fp-dsl').textContent=fmt(localPrices.diesel)+'đ/L';
   calculate();
 }
-
-function clearLocalPrices() {
-  localPrices = null;
+function clearLocalPrices(){
+  localPrices=null;
   document.getElementById('loc-card').classList.remove('show');
-  document.getElementById('local-price-card').style.display = 'none';
-  document.getElementById('hpc-loc').style.display = 'none';
+  document.getElementById('local-price-card').style.display='none';
+  document.getElementById('hpc-loc').style.display='none';
   document.getElementById('prov-detected').classList.add('hidden');
-  document.getElementById('prov-region-badge').style.display = 'none';
-  document.getElementById('price-col-header').textContent = 'So kỳ trước';
-  document.getElementById('price-table-region').textContent = '';
-  ['ptl-e5','ptl-r95','ptl-dsl'].forEach(id => document.getElementById(id).style.display = 'none');
-  document.getElementById('fp-e5').textContent = fmt(PRICES.e5) + 'đ/L';
-  document.getElementById('fp-r95').textContent = fmt(PRICES.ron95) + 'đ/L';
-  document.getElementById('fp-dsl').textContent = fmt(PRICES.diesel) + 'đ/L';
+  document.getElementById('prov-region-badge').style.display='none';
+  document.getElementById('price-col-header').textContent='So kỳ trước';
+  document.getElementById('price-table-region').textContent='';
+  ['ptl-e5','ptl-r95','ptl-dsl'].forEach(id=>document.getElementById(id).style.display='none');
+  document.getElementById('fp-e5').textContent=fmt(PRICES.e5)+'đ/L';
+  document.getElementById('fp-r95').textContent=fmt(PRICES.ron95)+'đ/L';
+  document.getElementById('fp-dsl').textContent=fmt(PRICES.diesel)+'đ/L';
   calculate();
 }
-
-function updateLocalPriceDisplay() {
-  if (!localPrices) return;
-  document.getElementById('lcpv-e5').textContent  = fmt(localPrices.e5) + 'đ';
-  document.getElementById('lcpv-r95').textContent = fmt(localPrices.ron95) + 'đ';
-  document.getElementById('lcpv-dsl').textContent = fmt(localPrices.diesel) + 'đ';
-  const setDiffStyle = (id, diff) => {
-    const el = document.getElementById(id);
-    el.className = diff > 0 ? 'lcp diff-up' : diff < 0 ? 'lcp diff-down' : 'lcp';
-  };
-  setDiffStyle('lcp-e5',  localPrices.diff_e5);
-  setDiffStyle('lcp-r95', localPrices.diff_r95);
-  setDiffStyle('lcp-dsl', localPrices.diff_dsl);
+function updateLocalPriceDisplay(){
+  if(!localPrices)return;
+  document.getElementById('lcpv-e5').textContent=fmt(localPrices.e5)+'đ';
+  document.getElementById('lcpv-r95').textContent=fmt(localPrices.ron95)+'đ';
+  document.getElementById('lcpv-dsl').textContent=fmt(localPrices.diesel)+'đ';
+  const s=(id,diff)=>{document.getElementById(id).className=diff>0?'lcp diff-up':diff<0?'lcp diff-down':'lcp';};
+  s('lcp-e5',localPrices.diff_e5);s('lcp-r95',localPrices.diff_r95);s('lcp-dsl',localPrices.diff_dsl);
 }
-
-function renderSidebarLocalPrices() {
-  if (!localPrices) return;
-  const rows = [
-    {label:'E5 RON92',    val:localPrices.e5,     diff:localPrices.diff_e5,  color:'var(--accent)'},
-    {label:'RON95-III',   val:localPrices.ron95,  diff:localPrices.diff_r95, color:'var(--primary)'},
-    {label:'Dầu Diesel',  val:localPrices.diesel, diff:localPrices.diff_dsl, color:'var(--blue)'},
+function renderSidebarLocalPrices(){
+  if(!localPrices)return;
+  const rows=[
+    {label:'E5 RON92',val:localPrices.e5,diff:localPrices.diff_e5,color:'var(--accent)'},
+    {label:'RON95-III',val:localPrices.ron95,diff:localPrices.diff_r95,color:'var(--primary)'},
+    {label:'Dầu Diesel',val:localPrices.diesel,diff:localPrices.diff_dsl,color:'var(--blue)'},
   ];
-  const container = document.getElementById('local-price-rows');
-  container.innerHTML = '';
-  rows.forEach(r => {
-    const diffStr = r.diff > 0 ? `<span style="color:var(--green);font-size:10px;"> +${fmt(r.diff)}đ cao hơn</span>`
-                  : r.diff < 0 ? `<span style="color:var(--primary);font-size:10px;"> ${fmt(r.diff)}đ thấp hơn</span>`
-                  : `<span style="color:var(--t3);font-size:10px;"> Bằng toàn quốc</span>`;
-    const el = document.createElement('div');
-    el.className = 'local-price-row';
-    el.innerHTML = `<span style="font-size:12px;color:var(--t2);">${r.label}</span><div style="text-align:right;"><div style="font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;color:${r.color};">${fmt(r.val)}đ/L</div>${diffStr}</div>`;
-    container.appendChild(el);
+  const c=document.getElementById('local-price-rows');c.innerHTML='';
+  rows.forEach(r=>{
+    const ds=r.diff>0?`<span style="color:var(--green);font-size:10px;">+${fmt(r.diff)}đ cao hơn</span>`
+      :r.diff<0?`<span style="color:var(--primary);font-size:10px;">${fmt(r.diff)}đ thấp hơn</span>`
+      :`<span style="color:var(--t3);font-size:10px;">Bằng toàn quốc</span>`;
+    const el=document.createElement('div');el.className='local-price-row';
+    el.innerHTML=`<span style="font-size:12px;color:var(--t2);">${r.label}</span><div style="text-align:right;"><div style="font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;color:${r.color};">${fmt(r.val)}đ/L</div>${ds}</div>`;
+    c.appendChild(el);
   });
-  document.getElementById('local-price-note').textContent =
-    'Giá địa phương ước tính, giao động thực tế theo từng cửa hàng. Cập nhật khi giá toàn quốc thay đổi.';
+  document.getElementById('local-price-note').textContent='Giá địa phương ước tính, dao động theo từng cửa hàng.';
 }
-
-function renderTableRegionDiffs() {
-  if (!localPrices) return;
-  const items = [
-    {labelId:'ptl-e5',  diff:localPrices.diff_e5},
-    {labelId:'ptl-r95', diff:localPrices.diff_r95},
-    {labelId:'ptl-dsl', diff:localPrices.diff_dsl},
-  ];
-  items.forEach(({labelId, diff}) => {
-    const el = document.getElementById(labelId);
-    el.style.display = '';
-    if (diff > 0) { el.textContent = '+' + fmt(diff) + 'đ'; el.className = 'reg-diff higher'; }
-    else if (diff < 0) { el.textContent = fmt(diff) + 'đ'; el.className = 'reg-diff lower'; }
-    else { el.textContent = '='; el.className = 'reg-diff same'; }
+function renderTableRegionDiffs(){
+  if(!localPrices)return;
+  [['ptl-e5',localPrices.diff_e5],['ptl-r95',localPrices.diff_r95],['ptl-dsl',localPrices.diff_dsl]].forEach(([id,diff])=>{
+    const el=document.getElementById(id);el.style.display='';
+    if(diff>0){el.textContent='+'+fmt(diff)+'đ';el.className='reg-diff higher';}
+    else if(diff<0){el.textContent=fmt(diff)+'đ';el.className='reg-diff lower';}
+    else{el.textContent='=';el.className='reg-diff same';}
   });
 }
 
-// ============================================================
-// UTILS
-// ============================================================
-function pad(x){ return String(x).padStart(2,'0'); }
-function fmt(n){ return (n||0).toLocaleString('vi-VN'); }
-
-// ============================================================
-// VEHICLE DATA
-// ============================================================
+// ── VEHICLE DATA ─────────────────────────────────────────────
 const DATA={
   motorbike:{
     honda:{name:'Honda',icon:'🔴',models:[
@@ -978,160 +860,54 @@ const DATA={
   }
 };
 
-let curCat='motorbike', curBrand=null, allModels=[];
-
-function selectCat(cat){
-  curCat=cat; curBrand=null;
-  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('ct-'+cat).classList.add('active');
-  renderBrands();
-  document.getElementById('model-wrap').style.display='none';
-}
-function renderBrands(){
-  const g=document.getElementById('brand-grid'); g.innerHTML='';
-  Object.entries(DATA[curCat]).forEach(([key,b])=>{
-    const btn=document.createElement('button');
-    btn.className='brand-btn'+(curBrand===key?' sel':'');
-    btn.innerHTML=`<div class="brand-logo">${b.icon}</div>${b.name}`;
-    btn.onclick=()=>{curBrand=key;document.querySelectorAll('.brand-btn').forEach(x=>x.classList.remove('sel'));btn.classList.add('sel');showModels(key);};
-    g.appendChild(btn);
-  });
-}
+let curCat='motorbike',curBrand=null,allModels=[];
+function selectCat(cat){curCat=cat;curBrand=null;document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));document.getElementById('ct-'+cat).classList.add('active');renderBrands();document.getElementById('model-wrap').style.display='none';}
+function renderBrands(){const g=document.getElementById('brand-grid');g.innerHTML='';Object.entries(DATA[curCat]).forEach(([key,b])=>{const btn=document.createElement('button');btn.className='brand-btn'+(curBrand===key?' sel':'');btn.innerHTML=`<div class="brand-logo">${b.icon}</div>${b.name}`;btn.onclick=()=>{curBrand=key;document.querySelectorAll('.brand-btn').forEach(x=>x.classList.remove('sel'));btn.classList.add('sel');showModels(key);};g.appendChild(btn);});}
 renderBrands();
-
-function showModels(bk){
-  allModels=DATA[curCat][bk].models;
-  document.getElementById('model-wrap').style.display='block';
-  document.getElementById('model-search').value='';
-  renderModels(allModels);
-}
-function filterModels(){
-  const q=document.getElementById('model-search').value.toLowerCase();
-  renderModels(allModels.filter(m=>m.name.toLowerCase().includes(q)||m.year.includes(q)));
-}
-function renderModels(models){
-  const list=document.getElementById('model-list'); list.innerHTML='';
-  models.forEach(m=>{
-    const el=document.createElement('div');
-    el.className='mi'+(curVehicle&&curVehicle.id===m.id?' sel':'');
-    const sub=m.fuel==='ev'?`${m.year} · Điện · ${m.range}km`:`${m.year} · Bình: ${m.tank}L · ${m.con}L/100km`;
-    const fl=m.fuel==='diesel'?'Dầu':m.fuel==='ev'?'Điện':'Xăng';
-    el.innerHTML=`<div style="flex:1"><div class="mi-name">${m.name}</div><div class="mi-sub">${sub}</div></div><span class="mbadge ${m.badge}">${fl}</span>`;
-    el.onclick=()=>pickVehicle(m,el);
-    list.appendChild(el);
-  });
-}
-function pickVehicle(v,el){
-  document.querySelectorAll('.mi').forEach(x=>x.classList.remove('sel'));
-  el.classList.add('sel');
-  curVehicle=v;
-  setVehicleDisplay(v);
-  if(v.fuel!=='ev') selFuelFn(v.fuel);
-  document.getElementById('result').classList.remove('show');
-  calculate();
-}
-function setVehicleDisplay(v){
-  document.getElementById('vinfo').classList.add('show');
-  document.getElementById('vi-name').textContent=v.name+(v.year?' · '+v.year:'');
-  if(v.fuel==='ev'){
-    document.getElementById('vi-tank').textContent=v.range+'km';
-    document.getElementById('vi-con').textContent=v.kwh+'kWh';
-    document.getElementById('vi-rng').textContent=v.range+'km';
-  } else {
-    document.getElementById('vi-tank').textContent=v.tank+'L';
-    document.getElementById('vi-con').textContent=v.con+'L/100km';
-    document.getElementById('vi-rng').textContent=Math.round(v.tank/v.con*100)+'km';
-  }
-}
-function switchSub(p){
-  document.getElementById('st-list').classList.toggle('active',p==='list');
-  document.getElementById('st-manual').classList.toggle('active',p==='manual');
-  document.getElementById('panel-list').classList.toggle('active',p==='list');
-  document.getElementById('panel-manual').classList.toggle('active',p==='manual');
-}
+function showModels(bk){allModels=DATA[curCat][bk].models;document.getElementById('model-wrap').style.display='block';document.getElementById('model-search').value='';renderModels(allModels);}
+function filterModels(){const q=document.getElementById('model-search').value.toLowerCase();renderModels(allModels.filter(m=>m.name.toLowerCase().includes(q)||m.year.includes(q)));}
+function renderModels(models){const list=document.getElementById('model-list');list.innerHTML='';models.forEach(m=>{const el=document.createElement('div');el.className='mi'+(curVehicle&&curVehicle.id===m.id?' sel':'');const sub=m.fuel==='ev'?`${m.year}·Điện·${m.range}km`:`${m.year}·Bình:${m.tank}L·${m.con}L/100km`;const fl=m.fuel==='diesel'?'Dầu':m.fuel==='ev'?'Điện':'Xăng';el.innerHTML=`<div style="flex:1"><div class="mi-name">${m.name}</div><div class="mi-sub">${sub}</div></div><span class="mbadge ${m.badge}">${fl}</span>`;el.onclick=()=>pickVehicle(m,el);list.appendChild(el);});}
+function pickVehicle(v,el){document.querySelectorAll('.mi').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');curVehicle=v;setVehicleDisplay(v);if(v.fuel!=='ev')selFuelFn(v.fuel);document.getElementById('result').classList.remove('show');calculate();}
+function setVehicleDisplay(v){document.getElementById('vinfo').classList.add('show');document.getElementById('vi-name').textContent=v.name+(v.year?' · '+v.year:'');if(v.fuel==='ev'){document.getElementById('vi-tank').textContent=v.range+'km';document.getElementById('vi-con').textContent=v.kwh+'kWh';document.getElementById('vi-rng').textContent=v.range+'km';}else{document.getElementById('vi-tank').textContent=v.tank+'L';document.getElementById('vi-con').textContent=v.con+'L/100km';document.getElementById('vi-rng').textContent=Math.round(v.tank/v.con*100)+'km';}}
+function switchSub(p){['list','manual'].forEach(x=>{document.getElementById('st-'+x).classList.toggle('active',x===p);document.getElementById('panel-'+x).classList.toggle('active',x===p);});}
 
 async function aiLookup(){
   const brand=document.getElementById('m-brand').value.trim();
   const model=document.getElementById('m-model').value.trim();
   if(!brand&&!model){alert('Vui lòng nhập tên hãng hoặc dòng xe!');return;}
-  const box=document.getElementById('ai-lookup-box');
-  box.classList.add('show');
-  document.getElementById('alb-status').innerHTML='<div class="spin"></div><span>Đang tra cứu thông số...</span>';
+  const box=document.getElementById('ai-lookup-box');box.classList.add('show');
+  document.getElementById('alb-status').innerHTML='<div class="spin"></div><span> Đang tra cứu...</span>';
   document.getElementById('alb-result').style.display='none';
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',headers:{'Content-Type':'application/json'},
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:400,
-        messages:[{role:'user',content:`Tra cứu thông số kỹ thuật xe "${brand} ${model}" tại Việt Nam. CHỈ JSON: {"name":"tên đầy đủ","tank":số_lít,"consume":lít_per_100km,"fuel":"e5/ron95/diesel","note":"mô tả ngắn"}`}]})
-    });
+        messages:[{role:'user',content:`Tra cứu thông số xe "${brand} ${model}" tại Việt Nam. CHỈ JSON: {"name":"tên đầy đủ","tank":số_lít,"consume":lít_per_100km,"fuel":"e5/ron95/diesel","note":"mô tả ngắn"}`}]})});
     const data=await res.json();
     const txt=(data.content?.[0]?.text||'').replace(/```json|```/g,'').trim();
-    const parsed=JSON.parse(txt);
-    aiLookupResult=parsed;
+    const parsed=JSON.parse(txt);aiLookupResult=parsed;
     document.getElementById('alb-status').innerHTML='✅ Đã tìm thấy';
     document.getElementById('alb-name').textContent=parsed.name;
     document.getElementById('alb-tank').textContent=parsed.tank+' L';
-    document.getElementById('alb-con').textContent=parsed.consume+' L';
+    document.getElementById('alb-con').textContent=parsed.consume+' L/100km';
     document.getElementById('alb-rng').textContent=Math.round(parsed.tank/parsed.consume*100)+' km';
     document.getElementById('alb-note').textContent=parsed.note||'';
     document.getElementById('alb-result').style.display='block';
-  }catch(e){document.getElementById('alb-status').innerHTML='❌ Không tra được, vui lòng thử lại';}
+  }catch(e){document.getElementById('alb-status').innerHTML='❌ Không tra được, thử lại.';}
 }
-function applyAIResult(){
-  if(!aiLookupResult)return;
-  curVehicle={id:'ai',name:aiLookupResult.name,tank:aiLookupResult.tank,con:aiLookupResult.consume,fuel:aiLookupResult.fuel};
-  setVehicleDisplay(curVehicle);selFuelFn(aiLookupResult.fuel);
-  document.getElementById('result').classList.remove('show');
-}
-
-function selFuelFn(f){
-  selFuelType=f;
-  document.querySelectorAll('.fo').forEach(o=>o.classList.remove('ae','ar','ad'));
-  const map={e5:'fo-e5',ron95:'fo-r95',diesel:'fo-dsl'};
-  const cls={e5:'ae',ron95:'ar',diesel:'ad'};
-  if(map[f]) document.getElementById(map[f]).classList.add(cls[f]);
-  calculate();
-}
-function toggleMode(){
-  const m=document.getElementById('calc-mode').value;
-  document.getElementById('in-partial').style.display=m==='partial'?'block':'none';
-  document.getElementById('in-dist').style.display=m==='distance'?'block':'none';
-  document.getElementById('in-money').style.display=m==='money'?'block':'none';
-}
+function applyAIResult(){if(!aiLookupResult)return;curVehicle={id:'ai',name:aiLookupResult.name,tank:aiLookupResult.tank,con:aiLookupResult.consume,fuel:aiLookupResult.fuel};setVehicleDisplay(curVehicle);selFuelFn(aiLookupResult.fuel);document.getElementById('result').classList.remove('show');}
+function selFuelFn(f){selFuelType=f;document.querySelectorAll('.fo').forEach(o=>o.classList.remove('ae','ar','ad'));const map={e5:'fo-e5',ron95:'fo-r95',diesel:'fo-dsl'};const cls={e5:'ae',ron95:'ar',diesel:'ad'};if(map[f])document.getElementById(map[f]).classList.add(cls[f]);calculate();}
+function toggleMode(){const m=document.getElementById('calc-mode').value;document.getElementById('in-partial').style.display=m==='partial'?'block':'none';document.getElementById('in-dist').style.display=m==='distance'?'block':'none';document.getElementById('in-money').style.display=m==='money'?'block':'none';}
 function calculate(){
-  if(!curVehicle){return;}
-  if(curVehicle.fuel==='ev'){
-    document.getElementById('result').classList.add('show');
-    document.getElementById('r-lbl').textContent='Xe điện — tầm hoạt động';
-    document.getElementById('r-amt').textContent=curVehicle.range;
-    document.getElementById('r-unit').textContent='km đầy pin';
-    document.getElementById('r-lit').textContent=curVehicle.kwh+' kWh/100km';
-    document.getElementById('r-km').textContent=curVehicle.range+' km';
-    return;
-  }
-  let price;
-  if(localPrices){
-    price = selFuelType==='e5' ? localPrices.e5 : selFuelType==='ron95' ? localPrices.ron95 : localPrices.diesel;
-  } else {
-    price = PRICES[selFuelType]||PRICES.e5;
-  }
+  if(!curVehicle)return;
+  if(curVehicle.fuel==='ev'){document.getElementById('result').classList.add('show');document.getElementById('r-lbl').textContent='Xe điện — tầm hoạt động';document.getElementById('r-amt').textContent=curVehicle.range;document.getElementById('r-unit').textContent='km đầy pin';document.getElementById('r-lit').textContent=curVehicle.kwh+' kWh/100km';document.getElementById('r-km').textContent=curVehicle.range+' km';return;}
+  const price=localPrices?(selFuelType==='e5'?localPrices.e5:selFuelType==='ron95'?localPrices.ron95:localPrices.diesel):(PRICES[selFuelType]||PRICES.e5);
+  const tag=localPrices?' — giá '+localPrices.provinceName:'';
   const mode=document.getElementById('calc-mode').value;
   let cost=0,liters=0,km=0;
-  if(mode==='full'){
-    liters=curVehicle.tank;cost=liters*price;km=Math.round(liters/curVehicle.con*100);
-    document.getElementById('r-lbl').textContent='Chi phí đổ đầy bình'+(localPrices?' (giá '+localPrices.provinceName+')':'');
-  } else if(mode==='partial'){
-    liters=parseFloat(document.getElementById('r-p').value)||0;cost=liters*price;km=Math.round(liters/curVehicle.con*100);
-    document.getElementById('r-lbl').textContent='Chi phí đổ '+liters+' lít'+(localPrices?' (giá '+localPrices.provinceName+')':'');
-  } else if(mode==='distance'){
-    km=parseFloat(document.getElementById('r-d').value)||0;liters=Math.round(km*curVehicle.con/100*100)/100;cost=liters*price;
-    document.getElementById('r-lbl').textContent='Chi phí đi '+km+' km'+(localPrices?' (giá '+localPrices.provinceName+')':'');
-  } else {
-    cost=parseFloat(document.getElementById('money-in').value)||0;
-    if(!cost||cost<=0){alert('Nhập số tiền!');return;}
-    liters=Math.round(cost/price*100)/100;km=Math.round(liters/curVehicle.con*100);
-    document.getElementById('r-lbl').textContent='Đổ '+cost.toLocaleString('vi-VN')+'đ được'+(localPrices?' (giá '+localPrices.provinceName+')':'');
-  }
+  if(mode==='full'){liters=curVehicle.tank;cost=liters*price;km=Math.round(liters/curVehicle.con*100);document.getElementById('r-lbl').textContent='Chi phí đổ đầy bình'+tag;}
+  else if(mode==='partial'){liters=parseFloat(document.getElementById('r-p').value)||0;cost=liters*price;km=Math.round(liters/curVehicle.con*100);document.getElementById('r-lbl').textContent='Chi phí đổ '+liters+' lít'+tag;}
+  else if(mode==='distance'){km=parseFloat(document.getElementById('r-d').value)||0;liters=Math.round(km*curVehicle.con/100*100)/100;cost=liters*price;document.getElementById('r-lbl').textContent='Chi phí đi '+km+' km'+tag;}
+  else{cost=parseFloat(document.getElementById('money-in').value)||0;if(!cost||cost<=0){alert('Nhập số tiền!');return;}liters=Math.round(cost/price*100)/100;km=Math.round(liters/curVehicle.con*100);document.getElementById('r-lbl').textContent='Đổ '+cost.toLocaleString('vi-VN')+'đ được'+tag;}
   document.getElementById('r-amt').textContent=cost.toLocaleString('vi-VN');
   document.getElementById('r-unit').textContent='đồng';
   document.getElementById('r-lit').textContent=liters.toFixed(2)+' lít';
@@ -1139,102 +915,34 @@ function calculate(){
   document.getElementById('result').classList.add('show');
 }
 
-function updatePricesManual(){
-  const e5=parseFloat(document.getElementById('mp-e5').value);
-  const ron95=parseFloat(document.getElementById('mp-r95').value);
-  const diesel=parseFloat(document.getElementById('mp-dsl').value);
-  const ker=parseFloat(document.getElementById('mp-ker').value);
-  if(!e5&&!ron95&&!diesel&&!ker){alert('Vui lòng nhập ít nhất một giá!');return;}
-  if(e5>0) PRICES.e5=e5;
-  if(ron95>0) PRICES.ron95=ron95;
-  if(diesel>0) PRICES.diesel=diesel;
-  if(ker>0) PRICES.kerosene=ker;
-  document.getElementById('hp-e5').textContent=fmt(PRICES.e5)+'đ';
-  document.getElementById('hp-r95').textContent=fmt(PRICES.ron95)+'đ';
-  document.getElementById('hp-dsl').textContent=fmt(PRICES.diesel)+'đ';
-  document.getElementById('hp-ker').textContent=fmt(PRICES.kerosene)+'đ';
-  document.getElementById('pt-e5').textContent=fmt(PRICES.e5)+'đ';
-  document.getElementById('pt-r95').textContent=fmt(PRICES.ron95)+'đ';
-  document.getElementById('pt-dsl').textContent=fmt(PRICES.diesel)+'đ';
-  document.getElementById('pt-ker').textContent=fmt(PRICES.kerosene)+'đ';
-  document.getElementById('fp-e5').textContent=fmt(PRICES.e5)+'đ/L';
-  document.getElementById('fp-r95').textContent=fmt(PRICES.ron95)+'đ/L';
-  document.getElementById('fp-dsl').textContent=fmt(PRICES.diesel)+'đ/L';
-  const d=new Date();
-  document.getElementById('psr-status').textContent='🟢 Giá tùy chỉnh';
-  document.getElementById('psr-time-big').textContent=pad(d.getHours())+':'+pad(d.getMinutes())+' · '+d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
-  const pKey=document.getElementById('prov-select').value;
-  if(pKey){localPrices=computeLocalPrices(pKey);updateLocalPriceDisplay();renderSidebarLocalPrices();}
-  alert('✓ Cập nhật giá thành công!');
+// ── SERVER PRICE SYNC ────────────────────────────────────────
+async function fetchPricesFromServer(){
+  try{
+    const res=await fetch('http://localhost:3000/api/fuel',{signal:AbortSignal.timeout(4000)});
+    if(!res.ok)throw new Error();
+    const data=await res.json();
+    let changed=false;
+    ['e5','ron95','diesel','kerosene','mazut'].forEach(f=>{if(data[f]&&data[f]>0&&data[f]!==PRICES[f]){PRICES[f]=data[f];changed=true;}});
+    if(!changed)return;
+    applyPricesToUI();
+    // If server provides an effective date, update it
+    if(data.effectiveDate)renderEffectiveDate(data.effectiveDate, data.source);
+    const pKey=document.getElementById('prov-select').value;
+    if(pKey){localPrices=computeLocalPrices(pKey);updateLocalPriceDisplay();renderSidebarLocalPrices();}
+    const banner=document.getElementById('price-banner');
+    document.getElementById('pb-title').textContent='✅ Đã tải giá mới từ server!';
+    document.getElementById('pb-time').textContent='Nguồn: '+(data.source||'server');
+    banner.classList.add('show');setTimeout(()=>banner.classList.remove('show'),6000);
+  }catch{}
 }
 
-// CLOCK
-function tick(){
-  const n=new Date();
-  document.getElementById('clock').textContent=pad(n.getHours())+':'+pad(n.getMinutes())+':'+pad(n.getSeconds());
-  const days=['CN','T2','T3','T4','T5','T6','T7'];
-  document.getElementById('clock-d').textContent=days[n.getDay()]+' '+n.getDate()+'/'+(n.getMonth()+1)+'/'+n.getFullYear();
-}
-setInterval(tick,1000);tick();
-
-// ============================================================
-// AUTO-FETCH GIÁ TỪ SERVER
-// ============================================================
-const SERVER_URL = 'http://localhost:3000/api/fuel';
-
-function applyServerPrices(data) {
-  const fields = ['e5','ron95','diesel','kerosene','mazut'];
-  let changed = false;
-  fields.forEach(f => {
-    if (data[f] && data[f] > 0 && data[f] !== PRICES[f]) {
-      PRICES[f] = data[f];
-      changed = true;
-    }
-  });
-  if (!changed) return;
-  document.getElementById('hp-e5').textContent  = fmt(PRICES.e5)+'đ';
-  document.getElementById('hp-r95').textContent = fmt(PRICES.ron95)+'đ';
-  document.getElementById('hp-dsl').textContent = fmt(PRICES.diesel)+'đ';
-  document.getElementById('hp-ker').textContent = fmt(PRICES.kerosene)+'đ';
-  document.getElementById('pt-e5').textContent  = fmt(PRICES.e5)+'đ';
-  document.getElementById('pt-r95').textContent = fmt(PRICES.ron95)+'đ';
-  document.getElementById('pt-dsl').textContent = fmt(PRICES.diesel)+'đ';
-  document.getElementById('pt-ker').textContent = fmt(PRICES.kerosene)+'đ';
-  document.getElementById('pt-maz').textContent = fmt(PRICES.mazut)+'đ/kg';
-  document.getElementById('fp-e5').textContent  = fmt(PRICES.e5)+'đ/L';
-  document.getElementById('fp-r95').textContent = fmt(PRICES.ron95)+'đ/L';
-  document.getElementById('fp-dsl').textContent = fmt(PRICES.diesel)+'đ/L';
-  const src = data.source && data.source !== 'fallback' ? '🌐 ' + data.source : '🟡 Chính thức';
-  document.getElementById('psr-status').textContent = src;
-  const d = data.updatedAt ? new Date(data.updatedAt) : new Date();
-  document.getElementById('psr-time-big').textContent =
-    pad(d.getHours())+':'+pad(d.getMinutes())+' · '+d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
-  const pKey = document.getElementById('prov-select').value;
-  if (pKey) { localPrices = computeLocalPrices(pKey); updateLocalPriceDisplay(); renderSidebarLocalPrices(); }
-  const banner = document.getElementById('price-banner');
-  document.getElementById('pb-title').textContent = '✅ Giá xăng đã được tải tự động từ server!';
-  document.getElementById('pb-time').textContent  = 'Nguồn: ' + (data.source || 'server') + ' · ' + d.toLocaleString('vi-VN');
-  banner.classList.add('show');
-  setTimeout(() => banner.classList.remove('show'), 6000);
-}
-
-async function fetchPricesFromServer() {
-  try {
-    const res = await fetch(SERVER_URL, { signal: AbortSignal.timeout(5000) });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    applyServerPrices(data);
-  } catch (err) {
-    console.warn('⚠️ Không kết nối được server localhost:3000, dùng giá mặc định.', err.message);
-  }
-}
-
-window.addEventListener('load', () => {
+// ── INIT ─────────────────────────────────────────────────────
+window.addEventListener('load',()=>{
+  applyPricesToUI();
+  renderEffectiveDate();          // Set "Giá hiệu lực từ" from PRICE_INFO
   fetchPricesFromServer();
-  setInterval(fetchPricesFromServer, 5 * 60 * 1000);
-  setTimeout(() => {
-    document.getElementById('loc-modal').classList.remove('hidden');
-  }, 1200);
+  setInterval(fetchPricesFromServer, 5*60*1000);
+  setTimeout(()=>document.getElementById('loc-modal').classList.remove('hidden'), 1200);
 });
 </script>
 </body>
