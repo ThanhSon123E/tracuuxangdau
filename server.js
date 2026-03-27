@@ -151,8 +151,8 @@ app.get('/api/health', (req, res) => {
   res.json({ ok: true, lastUpdate: fuelData.updatedAt, source: fuelData.source });
 });
 
-app.listen(3000, () => {
-  console.log('🚀 Server chạy tại http://localhost:3000');
-  console.log('   GET /api/fuel    — giá xăng dầu hiện tại');
-  console.log('   GET /api/health  — trạng thái server');
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server đang chạy tại Port: ${PORT}`);
+  console.log('   GET /api/fuel    — giá xăng dầu hiện tại');
+  console.log('   GET /api/health  — trạng thái server');
 });
