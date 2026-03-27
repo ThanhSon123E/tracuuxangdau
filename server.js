@@ -2,9 +2,13 @@ const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 app.use(cors());
+
+// Phục vụ các file tĩnh (HTML, CSS, JS) trong thư mục gốc
+app.use(express.static('.'));
 
 // ============================================================
 // GIÁ DỰ PHÒNG — cập nhật thủ công khi server không crawl được
@@ -34,7 +38,6 @@ async function fetchFromGiaxangdauNet() {
 
   let e5 = 0, ron95 = 0, diesel = 0, kerosene = 0;
 
-  // Thử nhiều cách selector khác nhau
   $('table tr, .price-table tr, .bang-gia tr').each((_, row) => {
     const cells = $(row).find('td');
     if (cells.length < 2) return;
@@ -49,7 +52,6 @@ async function fetchFromGiaxangdauNet() {
     else if (/[Hh]ỏa|[Kk]erosene/i.test(label) && !kerosene) kerosene = val;
   });
 
-  // Fallback: tìm text chứa giá trong toàn bộ trang
   if (!e5 || !ron95) {
     const bodyText = $.text();
     const matchE5  = bodyText.match(/E5[^0-9]*([0-9]{5,6})/);
@@ -106,11 +108,8 @@ async function fetchFuel() {
   for (const src of sources) {
     try {
       const prices = await src.fn();
-
-      // Kiểm tra giá hợp lệ (tránh parse ra số rác)
-      if (prices.e5 < 15000 || prices.e5 > 80000) throw new Error('Giá E5 bất thường: ' + prices.e5);
-      if (prices.ron95 < 15000 || prices.ron95 > 80000) throw new Error('Giá RON95 bất thường: ' + prices.ron95);
-
+      if (prices.e5 < 15000 || prices.e5 > 80000) throw new Error('Giá E5 bất thường');
+      
       fuelData = {
         e5:       prices.e5,
         ron95:    prices.ron95,
@@ -120,22 +119,13 @@ async function fetchFuel() {
         source:   src.name,
         updatedAt: new Date()
       };
-
-      console.log(`[${new Date().toLocaleString('vi-VN')}] ✅ Cập nhật từ ${src.name}:`, {
-        E5: prices.e5, RON95: prices.ron95, Diesel: prices.diesel
-      });
-      return; // thành công, dừng lại
-
+      return;
     } catch (err) {
-      console.warn(`[${new Date().toLocaleString('vi-VN')}] ⚠️  ${src.name} thất bại: ${err.message}`);
+      console.warn(`⚠️ ${src.name} thất bại: ${err.message}`);
     }
   }
-
-  // Tất cả nguồn đều lỗi → giữ nguyên dữ liệu cũ
-  console.warn(`[${new Date().toLocaleString('vi-VN')}] ❌ Tất cả nguồn thất bại, giữ giá cũ (${fuelData.source})`);
 }
 
-// Cập nhật ngay khi khởi động, sau đó mỗi 30 phút
 fetchFuel();
 setInterval(fetchFuel, 30 * 60 * 1000);
 
@@ -146,13 +136,19 @@ app.get('/api/fuel', (req, res) => {
   res.json(fuelData);
 });
 
-// Endpoint kiểm tra sức khỏe
 app.get('/api/health', (req, res) => {
   res.json({ ok: true, lastUpdate: fuelData.updatedAt, source: fuelData.source });
 });
 
+// Trang chủ trả về file index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// ============================================================
+// KHỞI CHẠY SERVER (Đã sửa cho Render)
+// ============================================================
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server đang chạy tại Port: ${PORT}`);
-  console.log('   GET /api/fuel    — giá xăng dầu hiện tại');
-  console.log('   GET /api/health  — trạng thái server');
+  console.log(`🚀 Server đang chạy thành công tại port ${PORT}`);
 });
